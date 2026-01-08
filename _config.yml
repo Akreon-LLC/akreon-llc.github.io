@@ -1,24 +1,20 @@
 # ----
 # Site
 
-title: Hydra Template
-url: "https://proud-alligator.cloudvent.net"
+title: Akreon
+url: ""
 baseurl:
-google_analytics_key:
-google_maps_javascript_api_key:
-disqus_shortname:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: Product marketing template for Jekyll.
+description: Akreon is under construction. Focused work, details soon.
 author:
-  name:
-  email:
+  name: Akreon
+  email: hello@akreon.ai
   twitter: # twitter username without the @ symbol
 social:
-  name: Hydra Template
-  links:
-    - https://github.com/CloudCannon/hydra-jekyll-template
+  name: Akreon
+  links: []
 
 # -----
 # Build
@@ -80,9 +76,6 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENSE
-
-# -----------
-# CloudCannon
 
 _select_data:
   social_icons:

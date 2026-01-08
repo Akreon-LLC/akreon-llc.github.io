@@ -40,8 +40,19 @@
 	p {
 		color: #fff;
 	}
+
+	.placeholder-icon {
+		color: rgba(255, 255, 255, 0.85);
+	}
 }
 
+.placeholder-icon {
+	display: block;
+	margin: 0 auto;
+	max-width: 260px;
+	height: auto;
+	color: $brand-color;
+}
 
 @media #{$desktop} {
 	.flex {
