@@ -1,16 +1,24 @@
-- name: Home
-  link: /
+- name: Platform
+  link: /platform/
+  new_window: false
+  highlight: false
+- name: Applications
+  link: /applications/
+  new_window: false
+  highlight: false
+- name: Demos
+  link: /demos/
+  new_window: false
+  highlight: false
+- name: Notes
+  link: /notes/
   new_window: false
   highlight: false
 - name: About
   link: /about/
   new_window: false
   highlight: false
-- name: Blog
-  link: /blog/
-  new_window: false
-  highlight: false
 - name: Contact
   link: /contact/
   new_window: false
-  highlight: false
+  highlight: true

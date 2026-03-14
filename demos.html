@@ -1,0 +1,27 @@
+---
+title: Demos
+description: Technical evidence artifacts and deployment-oriented demonstrations.
+body_class: page-standard
+---
+<div class="page-shell">
+  <div class="container reading-width">
+    <p class="section-label">Demos</p>
+    <h1 class="page-title">Technical evidence, not marketing collateral</h1>
+    <p class="page-lead">Future demo pages are structured to show the problem, setup, method, results, and why the result matters.</p>
+
+    {% assign demos = site.demos | sort: "order" %}
+    {% if demos.size > 0 %}
+      <div class="entry-list">
+        {% for demo in demos %}
+          <article class="entry-card">
+            <p class="entry-meta">{{ demo.entry_type | default: "Demo" }}</p>
+            <h2><a href="{{ site.baseurl }}{{ demo.url }}">{{ demo.title }}</a></h2>
+            <p>{{ demo.summary }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No demos published yet.</p>
+    {% endif %}
+  </div>
+</div>

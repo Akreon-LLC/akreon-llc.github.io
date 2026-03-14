@@ -1,0 +1,27 @@
+---
+title: Research / Technical Notes
+description: White papers, benchmark notes, architecture writeups, and engineering notes.
+body_class: page-standard
+---
+<div class="page-shell">
+  <div class="container reading-width">
+    <p class="section-label">Research / Technical Notes</p>
+    <h1 class="page-title">A serious engineering notebook</h1>
+    <p class="page-lead">This section is intended for technical notes, white papers, benchmark writeups, architecture discussions, and other materials that support engineering credibility.</p>
+
+    {% assign notes = site.notes | sort: "order" %}
+    {% if notes.size > 0 %}
+      <div class="entry-list">
+        {% for note in notes %}
+          <article class="entry-card">
+            <p class="entry-meta">{{ note.entry_type | default: "Technical Note" }}</p>
+            <h2><a href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a></h2>
+            <p>{{ note.summary }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No notes published yet.</p>
+    {% endif %}
+  </div>
+</div>

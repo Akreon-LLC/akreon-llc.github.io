@@ -1,8 +1,18 @@
-$brand-color: #4f2683;
-$secondary-brand-color: #3b1b66;
-$middle-gradient-color: mix($brand-color, $secondary-brand-color, 95%);
+$bg: #f2f0ea;
+$surface: #faf8f3;
+$surface-strong: #f6f3ec;
+$border: #d9d3c7;
+$border-strong: #b8b0a1;
+$text: #1c2427;
+$muted: #5b676b;
+$accent: #2f4b4f;
+$accent-soft: #6f7f77;
+$highlight: #b08d57;
+$shadow: rgba(17, 24, 26, 0.08);
 
-// Breakpoints
-$tablet: "(min-width: 450px)";
-$mid-point: "(min-width: 620px)";
-$desktop: "(min-width: 768px)";
+$serif-stack: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "URW Palladio L", Georgia, serif;
+$sans-stack: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+$mobile: "(min-width: 640px)";
+$tablet: "(min-width: 860px)";
+$desktop: "(min-width: 1120px)";

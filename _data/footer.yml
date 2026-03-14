@@ -1,12 +1,18 @@
-- links:
-  - name: Home
-    link: /
-  - name: About
-    link: /about/
-  - name: Blog
-    link: /blog/
-  - name: Contact
-    link: /contact/
-- links:
-  - name: Email
-    link: mailto:hello@akreon.ai
+- title: Explore
+  links:
+    - name: Platform
+      link: /platform/
+    - name: Applications
+      link: /applications/
+    - name: Demos
+      link: /demos/
+    - name: Notes
+      link: /notes/
+- title: Company
+  links:
+    - name: About
+      link: /about/
+    - name: Contact
+      link: /contact/
+    - name: Email
+      link: mailto:hello@akreon.ai
