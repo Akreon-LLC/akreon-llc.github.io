@@ -7,7 +7,7 @@ body_class: page-standard
   <div class="container reading-width">
     <p class="section-label">Demos</p>
     <h1 class="page-title">Technical evidence, not marketing collateral</h1>
-    <p class="page-lead">Future demo pages are structured to show the problem, setup, method, results, and why the result matters.</p>
+    <p class="page-lead">Selected demos will be published over time.</p>
 
     {% assign demos = site.demos | sort: "order" %}
     {% if demos.size > 0 %}
@@ -21,7 +21,7 @@ body_class: page-standard
         {% endfor %}
       </div>
     {% else %}
-      <p>No demos published yet.</p>
+      <p class="founder-note">We will use this section for deployment-oriented demonstrations once there are materials worth publishing.</p>
     {% endif %}
   </div>
 </div>

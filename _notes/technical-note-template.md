@@ -6,6 +6,7 @@ entry_type: Technical Note Template
 layout: post
 permalink: /notes/technical-note-template/
 order: 10
+published: false
 ---
 
 ## Context

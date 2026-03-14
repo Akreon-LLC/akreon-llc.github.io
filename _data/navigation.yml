@@ -6,14 +6,6 @@
   link: /applications/
   new_window: false
   highlight: false
-- name: Demos
-  link: /demos/
-  new_window: false
-  highlight: false
-- name: Notes
-  link: /notes/
-  new_window: false
-  highlight: false
 - name: About
   link: /about/
   new_window: false

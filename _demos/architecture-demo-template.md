@@ -6,6 +6,7 @@ entry_type: Template Demo
 layout: post
 permalink: /demos/demo-template/
 order: 10
+published: false
 ---
 
 ## Problem

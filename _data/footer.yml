@@ -4,10 +4,6 @@
       link: /platform/
     - name: Applications
       link: /applications/
-    - name: Demos
-      link: /demos/
-    - name: Notes
-      link: /notes/
 - title: Company
   links:
     - name: About

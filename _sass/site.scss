@@ -8,6 +8,7 @@
   --muted: #{$muted};
   --accent: #{$accent};
   --accent-soft: #{$accent-soft};
+  --signal: #{$signal};
   --highlight: #{$highlight};
   --shadow: #{$shadow};
   --radius: 18px;
@@ -68,7 +69,7 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.6rem, 5vw, 4.9rem);
+  font-size: clamp(2.2rem, 4.1vw, 3.9rem);
 }
 
 h2 {
@@ -142,6 +143,7 @@ ul {
   letter-spacing: 0.24em;
   text-transform: uppercase;
   font-weight: 600;
+  color: var(--signal);
 }
 
 .brand-tag {
@@ -222,12 +224,16 @@ ul {
 }
 
 .hero {
-  padding: 7rem 0 4rem;
+  padding: 6rem 0 3.25rem;
 }
 
 .hero-grid {
   display: grid;
   gap: var(--space-5);
+}
+
+.hero-grid-single {
+  grid-template-columns: 1fr;
 }
 
 .eyebrow,
@@ -236,25 +242,35 @@ ul {
   font-size: 0.76rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--accent-soft);
+  color: var(--signal);
+}
+
+.page-title,
+.section-intro > h2,
+.section-split h2 {
+  max-width: 18ch;
 }
 
 .hero-copy {
-  max-width: 760px;
+  max-width: 700px;
+}
+
+.hero h1 {
+  max-width: 15ch;
 }
 
 .hero-subheadline {
-  margin-top: var(--space-4);
-  font-size: 1.25rem;
+  margin-top: 1.35rem;
+  font-size: 1.15rem;
   color: var(--text);
-  max-width: 54rem;
+  max-width: 43rem;
 }
 
 .hero-summary,
 .page-lead {
   margin-top: var(--space-3);
-  font-size: 1.1rem;
-  max-width: 44rem;
+  font-size: 1.04rem;
+  max-width: 39rem;
 }
 
 .hero-actions,
@@ -263,6 +279,12 @@ ul {
   flex-wrap: wrap;
   gap: 0.9rem;
   margin-top: var(--space-4);
+}
+
+.hero-note {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--accent-soft);
 }
 
 .button {
@@ -296,60 +318,6 @@ ul {
   background: rgba(250, 248, 243, 0.7);
 }
 
-.hero-panel {
-  align-self: start;
-}
-
-.panel-shell {
-  padding: 1rem;
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  background: linear-gradient(180deg, rgba(250, 248, 243, 0.96), rgba(242, 238, 230, 0.86));
-  box-shadow: 0 30px 60px var(--shadow);
-}
-
-.panel-header {
-  display: flex;
-  gap: 0.4rem;
-  margin-bottom: 1rem;
-}
-
-.panel-header span {
-  width: 0.7rem;
-  height: 0.7rem;
-  border-radius: 999px;
-  background: var(--border-strong);
-}
-
-.panel-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.75rem;
-}
-
-.panel-block,
-.panel-trace {
-  min-height: 4rem;
-  border-radius: 14px;
-  border: 1px solid rgba(184, 176, 161, 0.65);
-  background: rgba(244, 241, 233, 0.88);
-}
-
-.panel-block-wide {
-  grid-column: span 2;
-}
-
-.panel-block-tall {
-  grid-row: span 2;
-}
-
-.panel-trace {
-  grid-column: span 2;
-  background:
-    linear-gradient(90deg, rgba(47, 75, 79, 0) 0%, rgba(47, 75, 79, 0.6) 45%, rgba(176, 141, 87, 0.7) 100%),
-    rgba(244, 241, 233, 0.88);
-}
-
 .section,
 .page-shell {
   padding: var(--space-6) 0 0;
@@ -370,6 +338,17 @@ ul {
 
 .section-intro.narrow {
   max-width: 56rem;
+}
+
+.section-intro {
+  justify-items: center;
+  text-align: center;
+}
+
+.section-intro > p,
+.section-intro > h2 {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card-grid,
@@ -511,8 +490,12 @@ ul {
 
 @media #{$tablet} {
   .hero-grid {
-    grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.8fr);
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
     align-items: start;
+  }
+
+  .hero-grid-single {
+    grid-template-columns: 1fr;
   }
 
   .section-split {

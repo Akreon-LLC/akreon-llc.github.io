@@ -7,7 +7,7 @@ body_class: page-standard
   <div class="container reading-width">
     <p class="section-label">Research / Technical Notes</p>
     <h1 class="page-title">A serious engineering notebook</h1>
-    <p class="page-lead">This section is intended for technical notes, white papers, benchmark writeups, architecture discussions, and other materials that support engineering credibility.</p>
+    <p class="page-lead">Selected technical materials will be published over time.</p>
 
     {% assign notes = site.notes | sort: "order" %}
     {% if notes.size > 0 %}
@@ -21,7 +21,7 @@ body_class: page-standard
         {% endfor %}
       </div>
     {% else %}
-      <p>No notes published yet.</p>
+      <p class="founder-note">This section will hold technical notes, architecture writeups, and white papers once there is material ready to share publicly.</p>
     {% endif %}
   </div>
 </div>
