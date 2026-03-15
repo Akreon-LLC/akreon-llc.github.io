@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-label="Akreon logo on blue gradient background">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2D57"/>
+      <stop offset="45%" stop-color="#16264B"/>
+      <stop offset="100%" stop-color="#0F1E3D"/>
+    </linearGradient>
+    <linearGradient id="wordmark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B186F8"/>
+      <stop offset="34%" stop-color="#8A72FF"/>
+      <stop offset="68%" stop-color="#677CFF"/>
+      <stop offset="100%" stop-color="#5EA1FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="340" rx="0" fill="url(#bg)"/>
+
+  <text
+    x="600"
+    y="205"
+    text-anchor="middle"
+    font-family="Inter, Avenir Next, Avenir, Montserrat, Poppins, Arial, sans-serif"
+    font-size="170"
+    font-weight="700"
+    letter-spacing="-6"
+    fill="url(#wordmark)">akreon</text>
+</svg>
