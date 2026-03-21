@@ -153,7 +153,7 @@ ul {
 }
 
 .brand-logo {
-  height: 2rem;
+  height: 3rem;
 }
 
 .brand-tag {
@@ -309,6 +309,14 @@ ul {
   color: #d5def8;
   max-width: 33rem;
   line-height: 1.55;
+}
+
+.hero-support-line {
+  margin-top: 0.9rem;
+  max-width: 36rem;
+  font-size: 0.96rem;
+  line-height: 1.55;
+  color: #b9c6ea;
 }
 
 .page-lead {
@@ -529,6 +537,7 @@ ul {
   text-transform: uppercase;
   color: #aebee9;
   font-weight: 700;
+  text-align: center;
 }
 
 .tag-grid span {
@@ -643,7 +652,7 @@ ul {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 17rem;
+  max-width: 32rem;
   margin-bottom: 1.5rem;
 }
 
@@ -677,7 +686,7 @@ ul {
 
 @media #{$tablet} {
   .hero-grid {
-    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+    grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
     align-items: center;
   }
 

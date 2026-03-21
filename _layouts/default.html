@@ -6,16 +6,16 @@
     {% seo %}
     {% feed_meta %}
     <link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
-    <link rel="apple-touch-icon" href="{{ site.baseurl }}/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png">
   </head>
   <body class="{{ page.body_class }}">
     <div class="site-shell">
       <header class="site-header">
         <div class="container header-inner">
           <a class="brand" href="{{ site.baseurl }}/" aria-label="Akreon home">
-            <img class="brand-logo" src="{{ site.baseurl }}/images/akreon-logo.svg" alt="Akreon">
-            <span class="brand-tag">Optimization and control infrastructure</span>
+            <img class="brand-logo" src="{{ site.baseurl }}/images/akreon-wordmark.svg" alt="Akreon">
+            <span class="brand-tag">Platform-backed optimization and control delivery</span>
           </a>
           {% include navigation.html %}
         </div>
@@ -27,7 +27,7 @@
         <div class="container footer-grid">
           <div class="footer-intro">
             <img class="footer-logo" src="{{ site.baseurl }}/images/akreon-logo.svg" alt="Akreon">
-            <p>Akreon builds deployment-grade infrastructure for optimization, control, and autonomous systems operating under real constraints.</p>
+            <p>Akreon delivers deterministic optimization and control results for real systems through applied engineering execution and proprietary infrastructure.</p>
           </div>
           {% for column in site.data.footer %}
             <div class="footer-column">
