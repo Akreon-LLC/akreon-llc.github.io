@@ -2,8 +2,12 @@
   links:
     - name: Platform
       link: /platform/
-    - name: Applications
-      link: /applications/
+    - name: Use Cases
+      link: /use-cases/
+    - name: Library
+      link: /library/
+    - name: Docs
+      link: /docs/
 - title: Company
   links:
     - name: About

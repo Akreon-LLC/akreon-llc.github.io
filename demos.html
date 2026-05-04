@@ -1,13 +1,13 @@
 ---
 title: Demos
-description: Technical evidence artifacts and deployment-oriented demonstrations.
+description: Technical demonstrations and platform examples.
 body_class: page-standard
 ---
 <div class="page-shell">
   <div class="container reading-width">
     <h1 class="eyebrow">Demos</h1>
     <p class="page-title">Selected demos</p>
-    <p class="page-lead">Technical evidence will be published over time.</p>
+    <p class="page-lead">Technical demonstrations will be published over time.</p>
 
     {% assign demos = site.demos | sort: "order" %}
     {% if demos.size > 0 %}
@@ -21,7 +21,7 @@ body_class: page-standard
         {% endfor %}
       </div>
     {% else %}
-      <p class="founder-note">Deployment-oriented demonstrations will appear here when there is material worth publishing.</p>
+      <p class="founder-note">Demonstrations will appear here when they are ready to publish.</p>
     {% endif %}
   </div>
 </div>

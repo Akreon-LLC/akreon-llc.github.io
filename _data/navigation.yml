@@ -2,12 +2,16 @@
   link: /platform/
   new_window: false
   highlight: false
-- name: Applications
-  link: /applications/
+- name: Use Cases
+  link: /use-cases/
   new_window: false
   highlight: false
-- name: About
-  link: /about/
+- name: Library
+  link: /library/
+  new_window: false
+  highlight: false
+- name: Docs
+  link: /docs/
   new_window: false
   highlight: false
 - name: Contact

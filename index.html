@@ -1,6 +1,6 @@
 ---
 title: Akreon
-description: Akreon delivers deployable optimization and control results through applied engineering engagement, platform-backed delivery, and reusable technical artifacts.
+description: Akreon helps teams turn control and estimation work into deterministic, reviewable software for real systems.
 layout: default
 body_class: home
 ---
@@ -8,10 +8,10 @@ body_class: home
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <p class="section-label">Platform-backed optimization and control delivery</p>
-        <h1 class="hero-title">Deploy optimization and control capabilities into real systems</h1>
-        <p class="hero-subheadline">Akreon helps organizations deliver MPC, constrained control, and synthesis workflows through technical pilots, applied engineering execution, and platform-backed delivery for robotics, mobility, aerospace, and other performance-critical systems.</p>
-        <p class="hero-support-line">Engagements can produce deployable builds, solver and control artifacts, embedded integration support, and licensed platform-backed components where appropriate.</p>
+        <p class="section-label">Control and estimation delivery</p>
+        <h1 class="hero-title">Most teams can design a controller. Few can deploy it.</h1>
+        <p class="hero-subheadline">Control and estimation methods often work in simulation. Akreon helps teams turn them into deterministic, reviewable software that survives embedded constraints, validation, and real operation.</p>
+        <p class="hero-support-line">Engagements can produce builds, reviewable artifacts, integration support, and licensed platform components where appropriate.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="{{ site.baseurl }}/contact/">Discuss a pilot or deployment</a>
           <a class="button button-secondary" href="{{ site.baseurl }}/platform/">See how delivery works</a>
@@ -19,10 +19,10 @@ body_class: home
       </div>
       <aside class="hero-panel" aria-label="Akreon positioning">
         <img class="hero-logo" src="{{ site.baseurl }}/images/akreon-wordmark.svg" alt="Akreon">
-        <p class="hero-panel-copy">Built for teams that need working control and optimization results, not just models, demos, or generic tooling.</p>
+        <p class="hero-panel-copy">For teams that need working control software, not just models, demos, or generic tooling.</p>
         <div class="hero-points">
-          <span>Deployable MPC and constrained-control artifacts</span>
-          <span>Control synthesis and gain scheduling delivery</span>
+          <span>Deployable feedback-control and estimation artifacts</span>
+          <span>Control synthesis and gain scheduling</span>
           <span>Validation-conscious results for real systems</span>
         </div>
       </aside>
@@ -33,20 +33,35 @@ body_class: home
     <div class="container">
       <div class="section-intro">
         <h2 class="eyebrow">Platform core</h2>
-        <p class="section-summary">Akreon’s platform is the engine behind delivery: it helps turn hard optimization and control problems into deployable software, technical artifacts, and repeatable engineering workflows that survive real system constraints.</p>
+        <p class="section-summary">Akreon’s platform turns control design, estimation, optimization, and synthesis workflows into software teams can review, validate, and reuse.</p>
       </div>
       <div class="card-grid card-grid-three">
         <article class="card">
-          <h3>Platform-backed delivery</h3>
-          <p>Engagements can start with a scoped deployment problem and end with delivered implementations, deployable builds, defined deployment rights, and a cleaner path from prototype logic to operational capability.</p>
+          <h3>Delivery</h3>
+          <p>Scoped engagements move from deployment problem to implementation, build, and defined deployment rights.</p>
         </article>
         <article class="card">
-          <h3>Applied optimization and control execution</h3>
-          <p>Akreon delivers MPC, constrained control, control synthesis, and gain scheduling work where timing, operating limits, and embedded realities are part of the job from the start.</p>
+          <h3>Control execution</h3>
+          <p>Akreon delivers feedback control, observer design, robust synthesis, constrained control, gain scheduling, and deployment workflows shaped around timing, limits, and embedded constraints.</p>
         </article>
         <article class="card">
-          <h3>Reusable technical artifacts</h3>
-          <p>Ground-up deterministic implementation, modern C++23, and compile-time-oriented design support deliverables that are reviewable, validation-conscious, and easier to extend through reusable Akreon platform capability.</p>
+          <h3>Reusable artifacts</h3>
+          <p>Deterministic C++23 and compile-time-oriented design support artifacts that are reviewable, validation-conscious, and reusable.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card-grid card-grid-three">
+        <article class="card">
+          <h3>Technical workflows</h3>
+          <p>Initial workflows cover state feedback, observer design, polytopic LMI synthesis, MIMO PID optimization, H₂/H∞ synthesis, H∞ loop shaping, robust synthesis objects, CLF-CBF QPs, and reference governors. Trajectory optimization and MPC are next.</p>
+        </article>
+        <article class="card">
+          <h3>Published artifacts</h3>
+          <p>Akreon publishes notebooks, HTML writeups, white papers, and examples that connect design and analysis to deployable control software.</p>
         </article>
       </div>
     </div>
@@ -55,24 +70,29 @@ body_class: home
   <section class="section section-muted">
     <div class="container">
       <div class="section-intro">
-        <h2 class="eyebrow">Applications</h2>
-        <p class="section-summary">Akreon is best suited to systems where deployment is the bottleneck and customers need applied optimization and control execution, not just another solver layer or a generic engineering shop.</p>
+        <h2 class="eyebrow">Use Cases</h2>
+        <p class="section-summary">Akreon fits systems where deployment is the bottleneck and teams need technical execution, not another solver layer or generic engineering shop.</p>
       </div>
-      <div class="application-priority-grid">
-        <article class="priority-group priority-group-primary">
-          <p class="priority-label">Primary Focus</p>
-          <div class="tag-grid">
-            <span>Robotics and autonomous systems</span>
-            <span>Automotive, mobility, off-road, and industrial vehicle systems</span>
-            <span>Aerospace, spacecraft, and mission systems</span>
-          </div>
+      <div class="card-grid card-grid-three">
+        <article class="card">
+          <h3>Robotics and autonomous systems</h3>
+          <p>Primary focus.</p>
         </article>
-        <article class="priority-group">
-          <p class="priority-label">Secondary and Longer Horizon</p>
-          <div class="tag-grid">
-            <span>Warehouse and industrial automation systems</span>
-            <span>Selected adjacent domains where deterministic deployment matters</span>
-          </div>
+        <article class="card">
+          <h3>Automotive, mobility, off-road, and industrial vehicle systems</h3>
+          <p>Primary focus.</p>
+        </article>
+        <article class="card">
+          <h3>Aerospace, spacecraft, and mission systems</h3>
+          <p>Primary focus.</p>
+        </article>
+        <article class="card">
+          <h3>Warehouse and industrial automation systems</h3>
+          <p>Secondary and longer horizon.</p>
+        </article>
+        <article class="card">
+          <h3>Selected adjacent domains where deterministic deployment matters</h3>
+          <p>Secondary and longer horizon.</p>
         </article>
       </div>
     </div>
@@ -82,25 +102,25 @@ body_class: home
     <div class="container consulting-block">
       <div class="section-intro narrow">
         <h2 class="eyebrow">Technical collaboration</h2>
-        <p class="section-summary">Selective engagements for teams that need hard results now, with delivery shaped by proprietary infrastructure that can compound into longer-term licensed platform leverage.</p>
+        <p class="section-summary">Selective engagements for teams that need hard results now and reusable platform leverage later.</p>
       </div>
       <div class="callout-row">
         <div class="callout">
           <h3>Pilot delivery</h3>
-          <p>Scoped work around MPC, constrained control, and deployment bottlenecks with clear technical outputs such as implementations, builds, and production-oriented control artifacts defined per engagement.</p>
+          <p>Scoped work around feedback control, estimation, constrained control, synthesis, and deployment bottlenecks, with outputs defined per engagement.</p>
         </div>
         <div class="callout">
           <h3>Forward-deployed technical execution</h3>
-          <p>Direct collaboration on synthesis, gain scheduling, embedded integration, and solver or control builds for teams that need expert execution tied to durable infrastructure.</p>
+          <p>Direct collaboration on synthesis, gain scheduling, embedded integration, and solver or control builds.</p>
         </div>
         <div class="callout">
           <h3>Transition to repeatable platform use</h3>
-          <p>Where there is strong fit, one-off delivery can evolve into reusable workflows, licensed platform-backed support, and recurring technical leverage over time.</p>
+          <p>Where there is strong fit, one-off delivery can evolve into reusable workflows and licensed platform support.</p>
         </div>
       </div>
       <div class="section-actions">
-        <a class="button button-primary" href="{{ site.baseurl }}/contact/">Discuss a platform-backed engagement</a>
-        <a class="button button-secondary" href="{{ site.baseurl }}/platform/">Review delivery options</a>
+        <a class="button button-primary" href="{{ site.baseurl }}/contact/">Discuss an engagement</a>
+        <a class="button button-secondary" href="{{ site.baseurl }}/use-cases/">Review use cases</a>
       </div>
     </div>
   </section>

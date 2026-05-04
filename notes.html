@@ -7,7 +7,7 @@ body_class: page-standard
   <div class="container reading-width">
     <h1 class="eyebrow">Research / Technical Notes</h1>
     <p class="page-title">Selected technical materials</p>
-    <p class="page-lead">Notes, architecture writeups, and white papers will be published over time.</p>
+    <p class="page-lead">Notes, architecture writeups, and white papers will appear here.</p>
 
     {% assign notes = site.notes | sort: "order" %}
     {% if notes.size > 0 %}
@@ -21,7 +21,7 @@ body_class: page-standard
         {% endfor %}
       </div>
     {% else %}
-      <p class="founder-note">Technical notes, architecture writeups, and white papers will appear here when there is material ready to share publicly.</p>
+      <p class="founder-note">Materials will appear here when they are ready to share publicly.</p>
     {% endif %}
   </div>
 </div>
