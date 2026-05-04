@@ -2,16 +2,17 @@
 # Site
 
 title: Akreon
-url: ""
+url: "https://akreon.ai"
 baseurl:
 logo: /images/favicon.png
-description: Akreon is building the infrastructure that bridges research advances and safe deployment in autonomous and performance-critical systems.
+description: Akreon is a cloud-backed engineering platform for deployable control software, feedback control and estimation, constrained workflows, and embedded C/C++ artifacts.
 author:
   name: Akreon
   email: hello@akreon.ai
 social:
   name: Akreon
-  links: []
+  links:
+    - https://akreon.ai
 
 # -----
 # Build
