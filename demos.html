@@ -1,13 +1,13 @@
 ---
 title: Demos
-description: Akreon technical demonstrations for deployable control software, feedback control, estimation, and embedded workflow examples.
+description: Akreon technical demonstrations for optimization-based control systems, generated artifacts, and synthesis workflows.
 body_class: page-standard
 ---
 <div class="page-shell">
   <div class="container reading-width">
     <h1 class="eyebrow">Demos</h1>
     <p class="page-title">Selected demos</p>
-    <p class="page-lead">Technical demonstrations will be published over time.</p>
+    <p class="page-lead">Technical demonstrations for synthesis workflows, generated artifacts, and embedded deployment interfaces.</p>
 
     {% assign demos = site.demos | sort: "order" %}
     {% if demos.size > 0 %}
@@ -21,7 +21,7 @@ body_class: page-standard
         {% endfor %}
       </div>
     {% else %}
-      <p class="founder-note">Demonstrations will appear here when they are ready to publish.</p>
+      <p class="founder-note">Demonstrations will appear here when the examples and generated artifacts are ready to publish.</p>
     {% endif %}
   </div>
 </div>

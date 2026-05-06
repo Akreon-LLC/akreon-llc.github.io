@@ -1,32 +1,32 @@
 ---
 title: Developer Documentation
-description: Pointers to generated Akreon SDK documentation, deployment interface notes, public repositories, and engineering workflow references.
+description: Akreon developer documentation for controls APIs, synthesis workflows, structured QPs, convex optimization endpoints, code generation, embedded deployment interfaces, and generated artifacts.
 body_class: page-standard
 ---
 <div class="page-shell">
   <div class="container reading-width">
     <h1 class="eyebrow">DOCS</h1>
-    <p class="page-title">Developer documentation</p>
-    <p class="page-lead">Akreon documentation is generated from the public Python package, deployment interfaces, and example workflows. Start with the SDK docs, then use examples for end-to-end design-to-deployment flows.</p>
+    <p class="page-title">Technical documentation</p>
+    <p class="page-lead">Documentation covers the controls API, synthesis workflows, structured QP construction, custom LP/QP/SOCP endpoints, code generation, deployment interfaces, and generated artifact formats.</p>
 
     <div class="mini-grid">
       <article class="mini-card">
-        <h2>Python SDK Docs</h2>
-        <p>Sphinx-generated API and usage documentation for akreon-python.</p>
+        <h2>Controls API</h2>
+        <p>Sphinx-generated API references for models, objectives, constraints, synthesis settings, QP construction, solver configuration, and target declarations.</p>
         <!-- TODO: Replace placeholder href with generated akreon-python SDK documentation URL. -->
-        <p class="section-link"><a href="#">View SDK docs</a></p>
+        <p class="section-link"><a href="#">View API docs</a></p>
       </article>
       <article class="mini-card">
         <h2>Deployment Interface</h2>
-        <p>Generated C/C++ API notes, headers, and embedded integration conventions for deployable controller artifacts.</p>
+        <p>Generated C/C++ API notes, headers, runtime conventions, build metadata, and embedded integration boundaries.</p>
         <!-- TODO: Replace placeholder href with generated deployment interface documentation URL. -->
         <p class="section-link"><a href="#">View deployment docs</a></p>
       </article>
       <article class="mini-card">
-        <h2>GitHub</h2>
-        <p>Source packages, examples, issues, and releases.</p>
+        <h2>Examples</h2>
+        <p>Reference workflows for state synthesis, observer and estimator synthesis, H2/Hinf workflows, PID autotuning, structured QPs, solver generation, and artifact inspection.</p>
         <!-- TODO: Replace placeholder href with public Akreon GitHub or akreon-python repository URL. -->
-        <p class="section-link"><a href="#">View GitHub</a></p>
+        <p class="section-link"><a href="{{ site.baseurl }}/library/examples/">View examples</a></p>
       </article>
     </div>
   </div>

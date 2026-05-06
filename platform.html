@@ -1,74 +1,184 @@
 ---
 title: Platform
-description: Cloud-backed engineering platform for feedback control, estimation, constrained workflows, control synthesis, and deterministic embedded C/C++ artifacts.
+description: Akreon platform infrastructure for design-time control synthesis, generated C/C++ control artifacts, cloud-backed builds, and roadmap runtime optimization workflows.
 schema_type: SoftwareApplication
 body_class: page-standard
 ---
 <div class="page-shell">
   <div class="container reading-width">
     <h1 class="eyebrow">Platform</h1>
-    <p class="page-title">Cloud-backed infrastructure for deployable control software</p>
-    <p class="page-lead">Akreon provides a cloud-backed platform for designing, synthesizing, and deploying control and estimation workflows into deterministic software artifacts.</p>
+    <p class="page-title">Optimization infrastructure for deployable control systems.</p>
+    <p class="page-lead">Akreon connects controls-fluent APIs, convex optimization infrastructure, deterministic code generation, and cloud-backed build workflows into deployable embedded software pipelines.</p>
 
     <div class="prose">
-      <p>The hard part is the interface between design and deployment: deterministic software, reviewable artifacts, embedded constraints, validation, and real operation.</p>
-      <p>Engineers work through Python-based design and analysis flows, with cloud-backed synthesis and build pipelines generating deployable outputs for embedded systems and production environments.</p>
-      <p>Trajectory optimization and MPC are the next expansion layer.</p>
+      <p>The platform is built for controls, autonomy, robotics, GNC, aerospace software, and embedded systems teams that need a controlled path from analysis workflows to target software.</p>
+      <p>The current beta surface is centered on design-time synthesis and generated control artifacts. Structured QP and target deployment work may be scoped with early technical users. Runtime MPC and larger onboard optimization workflows are roadmap expansion areas.</p>
+      <p>Near-term outputs include generated C/C++ control artifacts, controller objects, headers, libraries, metadata, build outputs, reviewable interfaces, and cloud-backed artifact generation.</p>
     </div>
 
     <section class="inline-section">
-      <h2>Platform usage</h2>
-      <p class="founder-note">Akreon is designed to be used directly by engineering teams. Workflows start in Python for modeling, synthesis, and analysis, then move through cloud-backed pipelines that package deployable control artifacts.</p>
+      <h2>Platform Architecture</h2>
+      <p class="founder-note">Akreon separates the control problem, optimization formulation, solver infrastructure, build workflow, and embedded artifact boundary into explicit platform layers.</p>
       <div class="mini-grid">
         <article class="mini-card">
-          <h3>Python workflows</h3>
-          <p>Model systems, configure synthesis problems, analyze results, and prepare deployment requests from engineering-native Python interfaces.</p>
+          <h3>Controls APIs</h3>
+          <p>State-space models, synthesis specifications, estimator workflows, constrained-control interfaces, scheduling structure, and target declarations.</p>
         </article>
         <article class="mini-card">
-          <h3>Cloud-backed execution</h3>
-          <p>Run synthesis, validation, and build workflows through managed platform infrastructure instead of maintaining custom internal tooling.</p>
+          <h3>Convex Optimization Layer</h3>
+          <p>Conic formulations, synthesis programs, QP/SOCP infrastructure, robust optimization workflows, and LMI-oriented design paths.</p>
         </article>
         <article class="mini-card">
-          <h3>Generated artifacts</h3>
-          <p>Produce deterministic C/C++ components, headers, libraries, metadata, and integration interfaces for embedded and real-time systems.</p>
+          <h3>Optimization Engine</h3>
+          <p>Proprietary conic interior-point infrastructure used behind platform workflows and generated optimization artifacts.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Build and Artifact Generation</h3>
+          <p>Generated C/C++ libraries, control artifacts, headers, metadata, embedded interfaces, deployment descriptors, and review outputs.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Cloud-Backed Builds</h3>
+          <p>Managed artifact generation, packaging, build outputs, and target-oriented workflow support.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Embedded Artifacts</h3>
+          <p>Controller objects, generated libraries, integration boundaries, runtime components where supported, and metadata for engineering review.</p>
         </article>
       </div>
     </section>
 
     <section class="inline-section">
-      <h2>Platform focus</h2>
+      <h2>Current Platform Surface</h2>
+      <p class="founder-note"><strong>Current / Beta.</strong> The near-term platform surface is design-time synthesis and generated control artifacts, with supported workflows exposed through controls-fluent APIs and cloud-backed builds.</p>
       <div class="mini-grid">
         <article class="mini-card">
-          <h3>Feedback and estimation first</h3>
-          <p>Initial workflows center on controller design, observer design, synthesis, robustness, and deployment readiness.</p>
+          <h3>Design-Time Synthesis</h3>
+          <p>Offline workflows for deriving controller, estimator, tuning, analysis, and validation-conscious deployment artifacts from explicit control specifications.</p>
         </article>
         <article class="mini-card">
-          <h3>Constrained workflows</h3>
-          <p>Near-term platform areas include CLF-CBF QPs, reference governors, safety filters, gain scheduling, and constrained control.</p>
+          <h3>State Feedback</h3>
+          <p>State-feedback and LQR-style workflows that produce reusable controller objects rather than analysis-only gains.</p>
         </article>
         <article class="mini-card">
-          <h3>Reviewable artifacts</h3>
-          <p>Deliverables can include generated C/C++ artifacts, build outputs, integration metadata, validation-conscious reports, and technical documentation.</p>
+          <h3>Observer and Estimator Design</h3>
+          <p>Observer, estimator, and LQG-style workflows where supported, packaged with interfaces, metadata, and reviewable implementation boundaries.</p>
+        </article>
+        <article class="mini-card">
+          <h3>H2/Hinf and Loop Shaping</h3>
+          <p>H2/Hinf, loop-shaping, and mixed-sensitivity synthesis workflows where supported for performance and disturbance-rejection requirements.</p>
+        </article>
+        <article class="mini-card">
+          <h3>LMI-Oriented Workflows</h3>
+          <p>Semidefinite and LMI-oriented synthesis paths for teams that need explicit optimization structure and traceable outputs.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Generated Control Artifacts</h3>
+          <p>Generated controller objects, C/C++ artifacts, headers, libraries, metadata, build outputs, and review outputs.</p>
         </article>
       </div>
     </section>
 
     <section class="inline-section">
-      <h2>Getting started</h2>
-      <p class="founder-note">Teams can use the platform directly where workflows are mature, or start with a focused pilot when the deployment path needs technical collaboration. Services are an on-ramp to repeatable platform use, not a replacement for the product.</p>
+      <h2>Pilot Workflows</h2>
+      <p class="founder-note"><strong>Pilot / Limited Availability.</strong> These workflows may be scoped with early technical users when the formulation, target, and integration boundary are concrete.</p>
       <div class="mini-grid">
         <article class="mini-card">
-          <h3>Direct platform use</h3>
-          <p>Use Python workflows and cloud-backed execution to generate deployable control artifacts.</p>
+          <h3>Structured QP Artifacts</h3>
+          <p>Structured QP artifact generation where supported, with explicit problem boundaries and generated interfaces.</p>
         </article>
         <article class="mini-card">
-          <h3>Focused pilot</h3>
-          <p>Scope a specific feedback control, estimation, constrained control, or deployment bottleneck with concrete outputs.</p>
+          <h3>CLF-CBF-Style QPs</h3>
+          <p>Structured QP artifacts for safety-filter-style constraints, with scope limited to artifact generation and reviewable formulation boundaries.</p>
         </article>
         <article class="mini-card">
-          <h3>Technical collaboration</h3>
-          <p>Work with Akreon on controller and estimation design, embedded integration, or validation-heavy deployment paths.</p>
+          <h3>Reference-Governor QPs</h3>
+          <p>Constrained reference-management formulations for systems that need command shaping around limits and operating envelopes.</p>
         </article>
+        <article class="mini-card">
+          <h3>Custom LP/QP/SOCP Endpoints</h3>
+          <p>Scoped optimization endpoints for custom objectives and constraints outside fixed synthesis templates.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Target-Specific Builds</h3>
+          <p>Target-specific embedded build pilots for generated C/C++ control artifacts, metadata, and integration outputs.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Deployment Integration</h3>
+          <p>Integration work connecting generated artifacts into simulation, CI, hardware-in-the-loop, review, and embedded software workflows.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="inline-section">
+      <h2>Runtime Optimization Roadmap</h2>
+      <p class="founder-note"><strong>Roadmap.</strong> These are roadmap workflows for online constrained optimization and deterministic embedded execution. They should not be read as generally available platform capabilities.</p>
+      <div class="mini-grid">
+        <article class="mini-card">
+          <h3>Embedded MPC</h3>
+          <p>Planned generated MPC runtimes for constrained regulation, tracking, and target-specific integration.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Trajectory Optimization</h3>
+          <p>Planned workflows for constrained prediction, planning, and optimization problems that feed deployable control software.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Onboard Constrained Optimization</h3>
+          <p>Planned onboard optimization workflows for allocation, constrained updates, reference management, and embedded optimization loops.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Generated Runtime Expansion</h3>
+          <p>Planned expansion from generated design-time artifacts toward generated runtime optimization components.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="inline-section">
+      <h2>Workflow Surfaces</h2>
+      <p class="founder-note">The platform is structured for technical artifacts and engineering review, with space reserved for visual documentation as public examples mature.</p>
+      <div class="mini-grid">
+        <article class="mini-card">
+          <h3>Architecture Diagrams</h3>
+          <p>Layered views of controls APIs, optimization formulations, solver infrastructure, generated code, cloud-backed builds, and embedded artifacts.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Notebook-to-Deployment Flow</h3>
+          <p>Workflow diagrams showing how models, specifications, synthesis jobs, generated artifacts, and embedded builds connect.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Generated API Screenshots</h3>
+          <p>Examples of generated interfaces, controller objects, metadata files, and target integration boundaries.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Deployment Pipeline Visuals</h3>
+          <p>Build pipeline views for cloud-backed synthesis, artifact packaging, reports, and target-oriented outputs.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Embedded Build Examples</h3>
+          <p>Minimal examples showing generated C/C++ artifacts, headers, libraries, metadata, and integration points.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="inline-section">
+      <h2>Access</h2>
+      <p class="founder-note">Teams can begin with current beta workflows where interfaces are mature, or scope pilot work when the target artifact and integration path need joint engineering definition.</p>
+      <div class="mini-grid">
+        <article class="mini-card">
+          <h3>Current / Beta Platform Use</h3>
+          <p>Use controls APIs and cloud-backed execution to generate design-time synthesis artifacts and C/C++ control outputs.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Pilot / Limited Availability Deployment</h3>
+          <p>Scope one structured QP artifact, reference-governor workflow, custom endpoint, target build, or deployment integration path.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Roadmap Alignment</h3>
+          <p>Discuss future embedded MPC, trajectory optimization, or onboard constrained optimization requirements as roadmap input.</p>
+        </article>
+      </div>
+      <div class="section-actions">
+        <a class="button button-primary" href="{{ site.baseurl }}/contact/">Discuss a Control Artifact</a>
+        <a class="button button-secondary" href="{{ site.baseurl }}/library/examples/">Review Technical Examples</a>
       </div>
     </section>
   </div>
