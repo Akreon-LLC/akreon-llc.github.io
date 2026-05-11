@@ -6,13 +6,10 @@ Static Jekyll site for Akreon’s company website.
 
 - `index.html`: homepage
 - `platform.html`: platform overview
-- `applications.html`: application framing
-- `demos.html`: demo index
-- `notes.html`: research and technical notes index
+- `library.html`: technical library hub
+- `docs.html`: developer reference landing page
 - `about.html`: company mission and philosophy
 - `contact.html`: contact page
-- `_demos/`: demo entries
-- `_notes/`: technical note entries
 - `_sass/site.scss`: primary visual system
 
 ## Develop
@@ -24,7 +21,6 @@ bundle exec jekyll serve
 
 ## Content patterns
 
-- Add future demos under `_demos/`
-- Add future technical notes and white papers under `_notes/`
-- Keep homepage messaging centered on platform identity
-- Keep consulting language secondary to the platform story
+- Keep homepage messaging centered on the design-to-deployment thesis
+- Keep platform details on `platform.html`
+- Keep technical examples, papers, notebooks, and docs grouped under Library/Docs

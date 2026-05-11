@@ -2,8 +2,6 @@
   links:
     - name: Platform
       link: /platform/
-    - name: Synthesis
-      link: /use-cases/
     - name: Library
       link: /library/
     - name: Docs

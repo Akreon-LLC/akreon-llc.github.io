@@ -19,30 +19,9 @@ social:
 
 timezone: Etc/UTC
 
-collections:
-  demos:
-    output: true
-  notes:
-    output: true
-
 permalink: pretty
 
 defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-      type: "demos"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-      type: "notes"
-    values:
-      layout: "post"
   - scope:
       path: ""
     values:

@@ -1,6 +1,6 @@
 ---
-title: Infrastructure for Optimization-Based Control Systems
-description: Akreon provides infrastructure for optimization-based control systems, from control specification to deterministic embedded software artifacts.
+title: Deployable Control Software for Physical Systems
+description: Akreon turns control and estimation workflows into reviewable generated software for embedded robotics, aerospace, and autonomous systems.
 layout: default
 body_class: home
 ---
@@ -8,45 +8,95 @@ body_class: home
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <!--<p class="section-label">Optimization-based control infrastructure</p>-->
-        <h1 class="hero-title">From control specification to deployable software.</h1>
-        <p class="hero-subheadline">Akreon provides infrastructure for optimization-based control systems, turning synthesis and constrained optimization workflows into deterministic embedded software artifacts.</p>
-        <p class="hero-support-line">Control specification, convex synthesis, code generation, cloud-backed builds, and embedded deployment artifacts.</p>
+        <h1 class="hero-title">Control design is only half the problem.</h1>
+        <p class="hero-subheadline">Akreon turns feedback control and estimation workflows into reviewable, deployable software for robotics, aerospace, and autonomous systems.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="{{ site.baseurl }}/platform/">Explore Platform</a>
-          <a class="button button-secondary" href="{{ site.baseurl }}/library/examples/">Review Technical Examples</a>
+          <a class="button button-secondary" href="{{ site.baseurl }}/library/">Technical Library</a>
         </div>
       </div>
       <aside class="hero-panel" aria-label="Akreon positioning">
         <img class="hero-logo" src="{{ site.baseurl }}/images/akreon-wordmark.svg" alt="Akreon">
-        <p class="hero-panel-copy">Infrastructure for controls teams moving optimization-based designs into embedded targets.</p>
+        <p class="hero-panel-copy">For controls teams that need more than scripts, notebooks, or solver calls: a repeatable path from synthesis to target software.</p>
         <div class="hero-points">
-          <span>State synthesis and optimal estimator design</span>
-          <span>H2/Hinf, loop shaping, and mixed synthesis</span>
-          <span>Generated control objects and QP artifacts</span>
+          <span>Feedback control and estimation first</span>
+          <span>Generated C/C++, headers, and metadata</span>
+          <span>MPC and trajectory optimization on the roadmap</span>
         </div>
       </aside>
     </div>
   </section>
 
+  <section class="section section-feature">
+    <div class="container">
+      <div class="deployment-story">
+        <div class="deployment-story-copy">
+          <p class="eyebrow">The missing layer</p>
+          <h2>Design-to-Deployment</h2>
+          <p>Most control tooling stops at analysis. Akreon focuses on deployment.</p>
+        </div>
+        <div class="deployment-flow" aria-label="Design to deployment flow">
+          <div class="deployment-endpoint deployment-endpoint-start">
+            <span>Design</span>
+          </div>
+          <div class="deployment-stages">
+            <article class="deployment-stage">
+              <span class="stage-node" aria-hidden="true"></span>
+              <span class="stage-index">01</span>
+              <h3>Specify</h3>
+              <p>Models, objectives, constraints</p>
+            </article>
+            <article class="deployment-stage">
+              <span class="stage-node" aria-hidden="true"></span>
+              <span class="stage-index">02</span>
+              <h3>Synthesize</h3>
+              <p>Feedback and estimation workflows</p>
+            </article>
+            <article class="deployment-stage">
+              <span class="stage-node" aria-hidden="true"></span>
+              <span class="stage-index">03</span>
+              <h3>Generate</h3>
+              <p>C/C++, headers, metadata</p>
+            </article>
+            <article class="deployment-stage">
+              <span class="stage-node" aria-hidden="true"></span>
+              <span class="stage-index">04</span>
+              <h3>Build</h3>
+              <p>Target builds and reports</p>
+            </article>
+            <article class="deployment-stage">
+              <span class="stage-node" aria-hidden="true"></span>
+              <span class="stage-index">05</span>
+              <h3>Deploy</h3>
+              <p>Embedded integration packages</p>
+            </article>
+          </div>
+          <div class="deployment-endpoint deployment-endpoint-finish">
+            <span>Deployment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container">
       <div class="section-intro">
-        <h2 class="eyebrow">Deployment gap</h2>
-        <p class="section-summary">Control designs often pass simulation before they have a credible path to embedded execution. The gap is tooling, translation, runtime constraints, and validation evidence.</p>
+        <h2 class="eyebrow">The deployment gap</h2>
+        <p class="section-summary">Many teams can design controllers. Fewer can turn them into embedded software that can be built, reviewed, integrated, and maintained.</p>
       </div>
       <div class="card-grid card-grid-three">
         <article class="card">
-          <h3>Fragmented tooling</h3>
-          <p>Models, notebooks, solver scripts, generated code, and target builds are usually maintained as separate systems.</p>
+          <h3>Design tools stop early</h3>
+          <p>Simulation results and solver scripts rarely define the target interfaces, build products, and review evidence needed for deployment.</p>
         </article>
         <article class="card">
-          <h3>Manual translation</h3>
-          <p>Controller logic is frequently rewritten by hand between analysis code and embedded implementation, adding review and regression burden.</p>
+          <h3>Translation is fragile</h3>
+          <p>Hand rewriting controller logic for embedded targets adds regression risk and makes it harder to prove the implementation matches the design.</p>
         </article>
         <article class="card">
-          <h3>Embedded constraints</h3>
-          <p>Timing, memory, numeric conditioning, integration interfaces, and traceable build outputs must be handled before deployment.</p>
+          <h3>Embedded context matters</h3>
+          <p>Timing, memory, numeric behavior, C interfaces, target builds, and integration boundaries have to be considered before the design is useful.</p>
         </article>
       </div>
     </div>
@@ -55,33 +105,21 @@ body_class: home
   <section class="section">
     <div class="container">
       <div class="section-intro">
-        <h2 class="eyebrow">Platform architecture</h2>
-        <p class="section-summary">Akreon connects controls-fluent APIs, convex optimization infrastructure, and deployment pipelines into a single path from specification to embedded artifact.</p>
+        <h2 class="eyebrow">What Akreon provides</h2>
+        <p class="section-summary">A controls-focused platform layer between synthesis and embedded software. It accepts explicit models and requirements, runs supported synthesis workflows, and produces software-shaped outputs.</p>
       </div>
       <div class="card-grid card-grid-three">
         <article class="card">
-          <h3>Controls APIs</h3>
-          <p>Python interfaces express models, objectives, constraints, synthesis problems, scheduling structure, and deployment targets.</p>
+          <h3>Controls-native inputs</h3>
+          <p>State-space models, objectives, constraints, synthesis settings, and target/runtime requirements are captured through engineering-facing APIs.</p>
         </article>
         <article class="card">
-          <h3>Convex optimization layer</h3>
-          <p>Workflows compile into linear, quadratic, conic, and semidefinite forms used for controller and observer synthesis.</p>
+          <h3>Supported synthesis</h3>
+          <p>Current beta work focuses on feedback control and estimation, including state-feedback, observer, and selected robust synthesis workflows.</p>
         </article>
         <article class="card">
-          <h3>Conic solver infrastructure</h3>
-          <p>Proprietary conic interior-point infrastructure supports synthesis workloads and generated deployment paths.</p>
-        </article>
-        <article class="card">
-          <h3>Code generation</h3>
-          <p>Generated C/C++ components, headers, metadata, and integration boundaries reduce hand translation from design code.</p>
-        </article>
-        <article class="card">
-          <h3>Cloud-backed builds</h3>
-          <p>Managed build pipelines package artifacts, reports, and target-specific outputs without requiring custom internal infrastructure.</p>
-        </article>
-        <article class="card">
-          <h3>Embedded artifacts</h3>
-          <p>Outputs are shaped for deterministic execution, review, validation planning, and integration into embedded control stacks.</p>
+          <h3>Deployment-aware generation</h3>
+          <p>Generated outputs are structured for C/C++ integration, build review, metadata inspection, and repeatable engineering workflows.</p>
         </article>
       </div>
     </div>
@@ -90,21 +128,21 @@ body_class: home
   <section class="section section-muted">
     <div class="container">
       <div class="section-intro">
-        <h2 class="eyebrow">Platform focus</h2>
-        <p class="section-summary">The current beta surface centers on design-time synthesis, deployable control objects, generated C/C++ artifacts, and cloud-backed builds. Structured QP workflows and deployment integration may be scoped as pilots. MPC and trajectory optimization remain roadmap extensions.</p>
+        <h2 class="eyebrow">What comes out</h2>
+        <p class="section-summary">Akreon is not just a solver or consulting wrapper. The product direction is repeatable generation of reviewable software packages from control and optimization specifications.</p>
       </div>
       <div class="card-grid card-grid-three">
         <article class="card">
-          <h3>Synthesis</h3>
-          <p>State synthesis, observer and optimal estimator synthesis, H2/Hinf, Hinf loop shaping, mixed synthesis, LMI workflows, and gain scheduling.</p>
+          <h3>Generated source</h3>
+          <p>C/C++ control code, C-compatible headers, controller/observer definitions, and integration boundaries for embedded software teams.</p>
         </article>
         <article class="card">
-          <h3>Pilot QP workflows</h3>
-          <p>Structured QP artifacts, CLF-CBF-style QPs, reference-governor QPs, and custom endpoints may be scoped with early technical users.</p>
+          <h3>Build products</h3>
+          <p>Static libraries where supported, build metadata, target build reports, and packaged outputs for cloud or customer build workflows.</p>
         </article>
         <article class="card">
-          <h3>Roadmap runtime optimization</h3>
-          <p>Embedded MPC, trajectory optimization, onboard constrained optimization, and generated MPC runtimes are roadmap expansion areas.</p>
+          <h3>Review records</h3>
+          <p>Synthesis outputs, formulation logs, configuration metadata, and reports that make the generated software easier to inspect.</p>
         </article>
       </div>
     </div>
@@ -113,29 +151,25 @@ body_class: home
   <section class="section">
     <div class="container">
       <div class="section-intro">
-        <h2 class="eyebrow">Applications</h2>
-        <p class="section-summary">Akreon is built for teams whose controllers must leave the analysis environment and run inside constrained systems.</p>
+        <h2 class="eyebrow">Where it applies</h2>
+        <p class="section-summary">The first wedge is feedback control and estimation workflows for teams building real physical systems. Trajectory optimization and embedded MPC are roadmap extensions, not the current general-availability claim.</p>
       </div>
       <div class="card-grid card-grid-three">
         <article class="card">
-          <h3>Robotics</h3>
-          <p>Actuation limits, state constraints, generated controller artifacts, and pilot structured QP workflows.</p>
+          <h3>Aerospace / GN&amp;C</h3>
+          <p>Controller and observer generation, gain scheduling, robust synthesis where supported, and reviewable integration outputs.</p>
         </article>
         <article class="card">
-          <h3>Aerospace</h3>
-          <p>Robust synthesis, gain scheduling, estimator/controller packaging, and validation-conscious integration outputs.</p>
+          <h3>Robotics and autonomy</h3>
+          <p>Feedback control, estimation, actuator-aware formulations, and pilot structured QP work when the target boundary is concrete.</p>
         </article>
         <article class="card">
-          <h3>Spacecraft systems</h3>
-          <p>Attitude, pointing, allocation, robust synthesis, observer artifacts, and constrained reference management.</p>
+          <h3>Industrial control</h3>
+          <p>Reusable generated control components that can fit existing automation, CI, simulation, and embedded integration flows.</p>
         </article>
         <article class="card">
-          <h3>Autonomous systems</h3>
-          <p>Estimator/controller packaging, gain scheduling, and pilot CLF-CBF-style or reference-governor formulations.</p>
-        </article>
-        <article class="card">
-          <h3>Mobility platforms</h3>
-          <p>Vehicle dynamics control, SISO/MIMO PID autotuning, actuator constraints, scheduling, and target-specific artifacts.</p>
+          <h3>Embedded optimization workflows</h3>
+          <p>Scoped pilots for structured QPs, reference governors, and target-specific builds where requirements are narrow enough to evaluate.</p>
         </article>
       </div>
     </div>
@@ -145,25 +179,25 @@ body_class: home
     <div class="container engagement-block">
       <div class="section-intro narrow">
         <h2 class="eyebrow">Engagement</h2>
-        <p class="section-summary">Akreon works with teams where a control workflow, target platform, or deployment artifact is concrete enough to evaluate technically.</p>
+        <p class="section-summary">Akreon is best evaluated around a concrete controller, estimator, target, or generated package the team can inspect technically.</p>
       </div>
       <div class="callout-row">
         <div class="callout">
-          <h3>Pilot deployments</h3>
-          <p>Focused trials around synthesis, generated control artifacts, structured QPs, reference-governor QPs, or target-specific deployment outputs.</p>
+          <h3>Beta workflows</h3>
+          <p>Feedback control and estimation synthesis with generated C/C++ outputs, metadata, reports, and cloud-backed builds.</p>
         </div>
         <div class="callout">
-          <h3>Enterprise integration</h3>
-          <p>Platform integration with existing simulation, build, review, and embedded software workflows.</p>
+          <h3>Pilot integrations</h3>
+          <p>Target-specific builds, structured QP packages, reference-governor workflows, or embedded integration where scope is well defined.</p>
         </div>
         <div class="callout">
-          <h3>Platform-backed support</h3>
-          <p>Technical support for controls APIs, synthesis workflows, solver configuration, and generated artifacts.</p>
+          <h3>Roadmap alignment</h3>
+          <p>Embedded MPC, trajectory optimization, and onboard constrained optimization requirements can inform future platform expansion.</p>
         </div>
       </div>
       <div class="section-actions">
         <a class="button button-primary" href="{{ site.baseurl }}/contact/">Discuss a Deployment</a>
-        <a class="button button-secondary" href="{{ site.baseurl }}/docs/">Read Docs</a>
+        <a class="button button-secondary" href="{{ site.baseurl }}/library/">Explore Library</a>
       </div>
     </div>
   </section>
