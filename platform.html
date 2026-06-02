@@ -1,143 +1,48 @@
 ---
-title: Platform
-description: Akreon platform for explicit control inputs, generated embedded software outputs, beta synthesis workflows, pilot workflows, and roadmap capabilities.
-schema_type: SoftwareApplication
+title: Technical Infrastructure
+description: Akreon technical infrastructure for model-based decision systems, constrained optimization, control, estimation, simulation, and implementation-aware numerical software.
 body_class: page-standard
 ---
 <div class="page-shell">
   <div class="container reading-width">
-    <h1 class="eyebrow">Platform</h1>
-    <p class="page-title">From control specifications to generated embedded software.</p>
-    <p class="page-lead">Akreon accepts explicit models, objectives, constraints, and target requirements, then produces reviewable generated packages for controls and embedded teams.</p>
+    <h1 class="eyebrow">Technical Infrastructure</h1>
+    <p class="page-title">Infrastructure for model-based decision systems.</p>
+    <p class="page-lead">This page is kept available for URL continuity. Akreon's current public focus is model-based decision systems for constrained, uncertain environments.</p>
 
     <div class="prose">
-      <p>Current beta work is focused on feedback control and estimation. Structured QP packages and target-specific deployment work may be scoped as pilots. Embedded MPC, trajectory optimization, and broader onboard optimization remain roadmap areas.</p>
+      <p>Akreon develops software and methods that connect models, measurements, objectives, and constraints to repeatable actions. The work is grounded in optimization, control, estimation, simulation, and implementation-aware numerical software.</p>
     </div>
 
     <section class="inline-section">
-      <h2>Inputs and Outputs</h2>
-      <p class="founder-note">What the controls team supplies, and what embedded teams receive.</p>
+      <h2>Technical scope</h2>
+      <p class="founder-note">Representative areas of infrastructure and method development.</p>
       <div class="io-grid">
         <article class="mini-card">
-          <h3>Inputs</h3>
+          <h3>Problem structure</h3>
           <ul class="compact-list">
-            <li>State-space models</li>
-            <li>Objectives and performance requirements</li>
+            <li>Models and measurements</li>
+            <li>Objectives and tradeoffs</li>
             <li>Constraints and operating limits</li>
-            <li>Synthesis settings</li>
-            <li>Target and runtime requirements</li>
+            <li>Uncertainty and timing requirements</li>
           </ul>
         </article>
         <article class="mini-card">
-          <h3>Outputs</h3>
+          <h3>Decision layers</h3>
           <ul class="compact-list">
-            <li>Synthesized controller and observer definitions</li>
-            <li>Generated C/C++ source or static libraries where supported</li>
-            <li>C-compatible headers</li>
-            <li>Build metadata and target reports</li>
-            <li>Embedded integration package</li>
-            <li>Reviewable reports and logs</li>
+            <li>Feedback control and estimation</li>
+            <li>Safety filters and constrained updates</li>
+            <li>Trajectory optimization and MPC</li>
+            <li>Planning, allocation, and higher-level policies</li>
           </ul>
-        </article>
-      </div>
-    </section>
-
-  <section class="inline-section">
-    <h2>Current / Beta</h2>
-    <p class="founder-note">Design-time control synthesis, estimation, and generated control software for engineering workflows.</p>
-  
-    <div class="mini-grid">
-      <article class="mini-card">
-        <h3>Feedback Control</h3>
-        <p>State-feedback and LQR-style workflows that produce reusable controller definitions for simulation, review, and deployment.</p>
-      </article>
-  
-      <article class="mini-card">
-        <h3>Estimation & Observers</h3>
-        <p>Observer, estimator, and LQG-style workflows for state reconstruction, sensor-driven feedback, and controller integration where supported.</p>
-      </article>
-  
-      <article class="mini-card">
-        <h3>Robust Synthesis</h3>
-        <p>Selected H2/Hinf, mixed-sensitivity, polytopic uncertainty, and related robust-control workflows where supported.</p>
-      </article>
-  
-      <article class="mini-card">
-        <h3>Uncertainty Modeling</h3>
-        <p>Early support for structured plant variation, polytopic model sets, and robustness-oriented analysis inputs.</p>
-      </article>
-  
-      <article class="mini-card">
-        <h3>Generated Software</h3>
-        <p>C/C++ source, C-compatible headers, static libraries where supported, metadata, and build outputs for downstream integration.</p>
-      </article>
-  
-      <article class="mini-card">
-        <h3>Integration Boundaries</h3>
-        <p>Package interfaces intended to fit simulation, CI, HIL, and embedded software flows without forcing a full-stack runtime dependency.</p>
-      </article>
-    </div>
-  </section>
-
-    <section class="inline-section">
-      <h2>Pilot / Limited Availability</h2>
-      <p class="founder-note">Scoped with early technical users when formulation, target, and integration boundaries are concrete.</p>
-      <div class="mini-grid">
-        <article class="mini-card">
-          <h3>Structured SDP and LMI Synthesis</h3>
-          <p>Structured SDP and LMI generation with explicit problem boundaries and inspectable configuration.</p>
-        </article>
-        <article class="mini-card">
-          <h3>CLF-CBF-Style QPs</h3>
-          <p>Safety-filter-style formulations with reviewable problem boundaries.</p>
-        </article>
-        <article class="mini-card">
-          <h3>Reference-Governor QPs</h3>
-          <p>Constrained reference management around limits and operating envelopes.</p>
-        </article>
-        <article class="mini-card">
-          <h3>Custom LP/QP/SOCP Kernels</h3>
-          <p>Scoped optimization kernels outside fixed beta synthesis templates.</p>
-        </article>
-        <article class="mini-card">
-          <h3>Target-Specific Builds</h3>
-          <p>Embedded build pilots for generated C/C++ outputs, metadata, and reports.</p>
-        </article>
-        <article class="mini-card">
-          <h3>Deployment Integration</h3>
-          <p>Integration into simulation, CI, hardware-in-the-loop, review, and embedded software workflows.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="inline-section">
-      <h2>Roadmap</h2>
-      <p class="founder-note">Planned extensions. Not general-availability capabilities today.</p>
-      <div class="mini-grid">
-        <article class="mini-card">
-          <h3>Embedded MPC</h3>
-          <p>Generated runtimes for constrained regulation and tracking.</p>
-        </article>
-        <article class="mini-card">
-          <h3>Trajectory Optimization</h3>
-          <p>Constrained prediction, planning, and optimization workflows.</p>
-        </article>
-        <article class="mini-card">
-          <h3>Onboard Constrained Optimization</h3>
-          <p>Allocation, constrained updates, reference management, and embedded optimization loops.</p>
-        </article>
-        <article class="mini-card">
-          <h3>Generated Runtime Expansion</h3>
-          <p>Expansion from design-time outputs toward runtime optimization components.</p>
         </article>
       </div>
     </section>
 
     <section class="inline-section cta-panel">
-      <h2>Have a concrete controller, estimator, or target package to evaluate?</h2>
+      <h2>For current public material, start with the Library.</h2>
       <div class="section-actions">
-        <a class="button button-primary" href="{{ site.baseurl }}/contact/">Discuss a Generated Package</a>
-        <a class="button button-secondary" href="{{ site.baseurl }}/library/">View Library</a>
+        <a class="button button-primary" href="{{ site.baseurl }}/library/">View Library</a>
+        <a class="button button-secondary" href="{{ site.baseurl }}/contact/">Contact</a>
       </div>
     </section>
   </div>

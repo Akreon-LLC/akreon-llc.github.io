@@ -5,7 +5,7 @@ title: Akreon
 url: "https://akreon.ai"
 baseurl:
 logo: /images/favicon.png
-description: Akreon is a cloud-backed engineering platform for deployable control software, feedback control and estimation, constrained workflows, and embedded C/C++ artifacts.
+description: Akreon builds model-based decision systems for constrained, uncertain environments.
 author:
   name: Akreon
   email: hello@akreon.ai
@@ -30,6 +30,11 @@ defaults:
       path: "index.html"
     values:
       layout: "default"
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
 
 plugins:
   - jekyll-sitemap

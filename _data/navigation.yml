@@ -1,5 +1,5 @@
-- name: Platform
-  link: /platform/
+- name: Home
+  link: /
   new_window: false
   highlight: false
 - name: Library
@@ -13,4 +13,4 @@
 - name: Contact
   link: /contact/
   new_window: false
-  highlight: true
+  highlight: false

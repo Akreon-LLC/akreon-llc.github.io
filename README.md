@@ -1,12 +1,14 @@
 # Akreon Website
 
-Static Jekyll site for Akreon’s company website.
+Static Jekyll site for Akreon's company website.
 
 ## Structure
 
 - `index.html`: homepage
-- `platform.html`: platform overview
+- `platform.html`: technical infrastructure page kept for URL continuity
 - `library.html`: technical library hub
+- `_posts/YYYY-MM-DD-title.md`: timestamped Library entries
+- `_drafts/library-entry-template.md`: front matter template for internal or external Library entries
 - `docs.html`: developer reference landing page
 - `about.html`: company mission and philosophy
 - `contact.html`: contact page
@@ -21,6 +23,7 @@ bundle exec jekyll serve
 
 ## Content patterns
 
-- Keep homepage messaging centered on the design-to-deployment thesis
-- Keep platform details on `platform.html`
-- Keep technical examples, papers, notebooks, and docs grouped under Library/Docs
+- Keep homepage messaging centered on model-based decision systems for constrained, uncertain environments
+- Keep visible top-level navigation limited to Home, Library, About, and Contact
+- Keep public notes, videos, notebooks, external references, and papers in the timestamped Library stream
+- Use `external_url` in post front matter when a Library entry should link to YouTube, Substack, arXiv, or another external artifact

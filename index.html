@@ -1,6 +1,6 @@
 ---
-title: Deployable Control Software for Physical Systems
-description: Akreon turns control and estimation workflows into reviewable generated software for embedded robotics, aerospace, and autonomous systems.
+title: Akreon Decision Engine
+description: Akreon builds model-based decision layers through feedback control, constrained optimization, higher-level policy, models, uncertainty, and control.
 layout: default
 body_class: home
 ---
@@ -8,20 +8,21 @@ body_class: home
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <h1 class="hero-title">Control design is only half the problem.</h1>
-        <p class="hero-subheadline">Akreon turns feedback control and estimation workflows into reviewable, deployable software for robotics, aerospace, and autonomous systems.</p>
+        <h1 class="hero-title">Akreon Decision Engine</h1>
+        <h2 class="hero-subtitle">Decision layers for constrained systems.</h2>
+        <p class="hero-subheadline">Fast feedback. Constrained optimization. Higher-level policy. Connected through models, uncertainty, and control.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="{{ site.baseurl }}/platform/">Explore Platform</a>
-          <a class="button button-secondary" href="{{ site.baseurl }}/library/">Technical Library</a>
+          <a class="button button-primary" href="{{ site.baseurl }}/library/">Read the library</a>
+          <a class="button button-secondary" href="{{ site.baseurl }}/contact/">Contact</a>
         </div>
       </div>
       <aside class="hero-panel" aria-label="Akreon positioning">
         <img class="hero-logo" src="{{ site.baseurl }}/images/akreon-wordmark.svg" alt="Akreon">
-        <p class="hero-panel-copy">For controls teams that need more than scripts, notebooks, or solver calls: a repeatable path from synthesis to target software.</p>
+        <p class="hero-panel-copy">Principled decision software for systems with constraints, uncertainty, noisy measurements, and timing limits.</p>
         <div class="hero-points">
-          <span>Feedback control and estimation first</span>
-          <span>Generated C/C++, headers, and metadata</span>
-          <span>MPC and trajectory optimization on the roadmap</span>
+          <span>Models and measurements</span>
+          <span>Objectives and constraints</span>
+          <span>Feedback, planning, and numerical software</span>
         </div>
       </aside>
     </div>
@@ -29,50 +30,38 @@ body_class: home
 
   <section class="section section-feature">
     <div class="container">
-      <div class="deployment-story">
-        <div class="deployment-story-copy">
-          <p class="eyebrow">The missing layer</p>
-          <h2>Design-to-Deployment</h2>
-          <p>Most control tooling stops at analysis. Akreon focuses on deployment.</p>
+      <div class="decision-system">
+        <div class="decision-system-copy">
+          <p class="eyebrow">Decision architecture</p>
+          <h2>Layered decisions, closed around models and signals.</h2>
+          <p>Useful decision systems do not live at one rate. Fast loops stabilize and reject disturbances. Optimization layers plan under constraints. Higher-level policies choose objectives, modes, and strategies as conditions change.</p>
         </div>
-        <div class="deployment-flow" aria-label="Design to deployment flow">
-          <div class="deployment-endpoint deployment-endpoint-start">
-            <span>Design</span>
+        <div class="decision-graphic" aria-label="Layered decision system">
+          <div class="decision-rail decision-rail-models">
+            <span>Models</span>
+            <span>Uncertainty</span>
+            <span>Constraints</span>
           </div>
-          <div class="deployment-stages">
-            <article class="deployment-stage">
-              <span class="stage-node" aria-hidden="true"></span>
-              <span class="stage-index">01</span>
-              <h3>Specify</h3>
-              <p>Models, objectives, constraints</p>
+          <div class="decision-layers">
+            <article class="decision-layer decision-layer-policy">
+              <span class="decision-rate">Slow</span>
+              <h3>Higher-level policy</h3>
+              <p>Objectives, modes, strategies</p>
             </article>
-            <article class="deployment-stage">
-              <span class="stage-node" aria-hidden="true"></span>
-              <span class="stage-index">02</span>
-              <h3>Synthesize</h3>
-              <p>Feedback and estimation workflows</p>
+            <article class="decision-layer decision-layer-optimization">
+              <span class="decision-rate">Mid-rate</span>
+              <h3>Constrained optimization</h3>
+              <p>Planning, allocation, MPC</p>
             </article>
-            <article class="deployment-stage">
-              <span class="stage-node" aria-hidden="true"></span>
-              <span class="stage-index">03</span>
-              <h3>Generate</h3>
-              <p>C/C++, headers, metadata</p>
-            </article>
-            <article class="deployment-stage">
-              <span class="stage-node" aria-hidden="true"></span>
-              <span class="stage-index">04</span>
-              <h3>Build</h3>
-              <p>Target builds and reports</p>
-            </article>
-            <article class="deployment-stage">
-              <span class="stage-node" aria-hidden="true"></span>
-              <span class="stage-index">05</span>
-              <h3>Deploy</h3>
-              <p>Embedded integration packages</p>
+            <article class="decision-layer decision-layer-feedback">
+              <span class="decision-rate">Fast</span>
+              <h3>Feedback control</h3>
+              <p>Stabilization, estimation, safety filters</p>
             </article>
           </div>
-          <div class="deployment-endpoint deployment-endpoint-finish">
-            <span>Deployment</span>
+          <div class="decision-plant">
+            <span class="plant-label">Operating system</span>
+            <span class="plant-detail">Signals, dynamics, timing limits</span>
           </div>
         </div>
       </div>
@@ -82,21 +71,21 @@ body_class: home
   <section class="section">
     <div class="container">
       <div class="section-intro">
-        <h2 class="eyebrow">The deployment gap</h2>
-        <p class="section-summary">Many teams can design controllers. Fewer can turn them into embedded software that can be built, reviewed, integrated, and maintained.</p>
+        <h2 class="eyebrow">Feedback control for constrained decisions</h2>
+        <p class="section-summary">Akreon's work connects feedback, planning, and policy through models, constraints, uncertainty, and numerical software.</p>
       </div>
       <div class="card-grid card-grid-three">
         <article class="card">
-          <h3>Design tools stop early</h3>
-          <p>Simulation results and solver scripts rarely define the target interfaces, build products, and review evidence needed for deployment.</p>
+          <h3>Fast loops</h3>
+          <p>High-rate feedback control, safety filters, and state estimation for systems that need stable behavior under disturbance and measurement noise.</p>
         </article>
         <article class="card">
-          <h3>Translation is fragile</h3>
-          <p>Hand rewriting controller logic for embedded targets adds regression risk and makes it harder to prove the implementation matches the design.</p>
+          <h3>Mid-rate optimization</h3>
+          <p>Trajectory optimization, model predictive control, planning, and allocation under explicit constraints and imperfect models.</p>
         </article>
         <article class="card">
-          <h3>Embedded context matters</h3>
-          <p>Timing, memory, numeric behavior, C interfaces, target builds, and integration boundaries have to be considered before the design is useful.</p>
+          <h3>Higher-level policies</h3>
+          <p>Objective selection, mode logic, strategy updates, and learned or neural components where they fit within a broader model-based system.</p>
         </article>
       </div>
     </div>
@@ -105,21 +94,29 @@ body_class: home
   <section class="section">
     <div class="container">
       <div class="section-intro">
-        <h2 class="eyebrow">What Akreon provides</h2>
-        <p class="section-summary">A controls-focused platform layer between synthesis and embedded software. It accepts explicit models and requirements, runs supported synthesis workflows, and produces software-shaped outputs.</p>
+        <h2 class="eyebrow">Technical foundation</h2>
+        <p class="section-summary">Akreon is grounded in systems where models are imperfect, measurements are noisy, constraints matter, and decisions must become reliable action.</p>
       </div>
       <div class="card-grid card-grid-three">
         <article class="card">
-          <h3>Controls-native inputs</h3>
-          <p>State-space models, objectives, constraints, synthesis settings, and target/runtime requirements are captured through engineering-facing APIs.</p>
+          <h3>Constrained optimization</h3>
+          <p>Numerical formulations that make objectives, limits, feasibility, and tradeoffs explicit.</p>
         </article>
         <article class="card">
-          <h3>Supported synthesis</h3>
-          <p>Current beta work focuses on feedback control and estimation, including state-feedback, observer, and selected robust synthesis workflows.</p>
+          <h3>Control and estimation</h3>
+          <p>Feedback, observers, filters, and decision loops built around uncertain state and imperfect signals.</p>
         </article>
         <article class="card">
-          <h3>Deployment-aware generation</h3>
-          <p>Generated outputs are structured for C/C++ integration, build review, metadata inspection, and repeatable engineering workflows.</p>
+          <h3>Physics-informed modeling</h3>
+          <p>Models that preserve the structure needed for reasoning about dynamics, limits, and operating envelopes.</p>
+        </article>
+        <article class="card">
+          <h3>Nonlinear and hybrid systems</h3>
+          <p>Methods for systems with switching behavior, saturation, contact, modes, or nonconvex dynamics.</p>
+        </article>
+        <article class="card">
+          <h3>Simulation and validation</h3>
+          <p>Testable artifacts, scenario analysis, and closed-loop evaluation before operational use.</p>
         </article>
       </div>
     </div>
@@ -128,76 +125,11 @@ body_class: home
   <section class="section section-muted">
     <div class="container">
       <div class="section-intro">
-        <h2 class="eyebrow">What comes out</h2>
-        <p class="section-summary">Akreon is not just a solver or consulting wrapper. The product direction is repeatable generation of reviewable software packages from control and optimization specifications.</p>
-      </div>
-      <div class="card-grid card-grid-three">
-        <article class="card">
-          <h3>Generated source</h3>
-          <p>C/C++ control code, C-compatible headers, controller/observer definitions, and integration boundaries for embedded software teams.</p>
-        </article>
-        <article class="card">
-          <h3>Build products</h3>
-          <p>Static libraries where supported, build metadata, target build reports, and packaged outputs for cloud or customer build workflows.</p>
-        </article>
-        <article class="card">
-          <h3>Review records</h3>
-          <p>Synthesis outputs, formulation logs, configuration metadata, and reports that make the generated software easier to inspect.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-intro">
-        <h2 class="eyebrow">Where it applies</h2>
-        <p class="section-summary">The first wedge is feedback control and estimation workflows for teams building real physical systems. Trajectory optimization and embedded MPC are roadmap extensions, not the current general-availability claim.</p>
-      </div>
-      <div class="card-grid card-grid-three">
-        <article class="card">
-          <h3>Aerospace / GN&amp;C</h3>
-          <p>Controller and observer generation, gain scheduling, robust synthesis where supported, and reviewable integration outputs.</p>
-        </article>
-        <article class="card">
-          <h3>Robotics and autonomy</h3>
-          <p>Feedback control, estimation, actuator-aware formulations, and pilot structured QP work when the target boundary is concrete.</p>
-        </article>
-        <article class="card">
-          <h3>Industrial control</h3>
-          <p>Reusable generated control components that can fit existing automation, CI, simulation, and embedded integration flows.</p>
-        </article>
-        <article class="card">
-          <h3>Embedded optimization workflows</h3>
-          <p>Scoped pilots for structured QPs, reference governors, and target-specific builds where requirements are narrow enough to evaluate.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-muted">
-    <div class="container engagement-block">
-      <div class="section-intro narrow">
-        <h2 class="eyebrow">Engagement</h2>
-        <p class="section-summary">Akreon is best evaluated around a concrete controller, estimator, target, or generated package the team can inspect technically.</p>
-      </div>
-      <div class="callout-row">
-        <div class="callout">
-          <h3>Beta workflows</h3>
-          <p>Feedback control and estimation synthesis with generated C/C++ outputs, metadata, reports, and cloud-backed builds.</p>
-        </div>
-        <div class="callout">
-          <h3>Pilot integrations</h3>
-          <p>Target-specific builds, structured QP packages, reference-governor workflows, or embedded integration where scope is well defined.</p>
-        </div>
-        <div class="callout">
-          <h3>Roadmap alignment</h3>
-          <p>Embedded MPC, trajectory optimization, and onboard constrained optimization requirements can inform future platform expansion.</p>
-        </div>
+        <h2 class="eyebrow">Public work</h2>
+        <p class="section-summary">The Library is a timestamped publication stream for technical notes, essays, notebooks, videos, and papers on decision systems, optimization, control, estimation, and simulation.</p>
       </div>
       <div class="section-actions">
-        <a class="button button-primary" href="{{ site.baseurl }}/contact/">Discuss a Deployment</a>
-        <a class="button button-secondary" href="{{ site.baseurl }}/library/">Explore Library</a>
+        <a class="button button-primary" href="{{ site.baseurl }}/library/">Explore the library</a>
       </div>
     </div>
   </section>

@@ -11,23 +11,6 @@
   "sameAs": {{ site.social.links | jsonify }}
 }
 </script>
-{% elsif page.schema_type == "SoftwareApplication" %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Akreon Platform",
-  "applicationCategory": "EngineeringApplication",
-  "operatingSystem": "Cloud, Linux, Embedded Systems",
-  "url": {{ page_url | jsonify }},
-  "description": {{ page.description | jsonify }},
-  "publisher": {
-    "@type": "Organization",
-    "name": "Akreon",
-    "url": {{ site.url | jsonify }}
-  }
-}
-</script>
 {% elsif page.schema_type == "TechArticle" %}
 <script type="application/ld+json">
 {

@@ -1,11 +1,9 @@
 - title: Explore
   links:
-    - name: Platform
-      link: /platform/
+    - name: Home
+      link: /
     - name: Library
       link: /library/
-    - name: Docs
-      link: /docs/
 - title: Company
   links:
     - name: About

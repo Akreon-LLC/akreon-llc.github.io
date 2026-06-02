@@ -18,7 +18,6 @@
         <div class="container header-inner">
           <a class="brand" href="{{ site.baseurl }}/" aria-label="Akreon home">
             <img class="brand-logo" src="{{ site.baseurl }}/images/akreon-wordmark.svg" alt="Akreon">
-            <!--<span class="brand-tag">From control design to deployable systems</span>-->
           </a>
           {% include navigation.html %}
         </div>
@@ -30,7 +29,7 @@
         <div class="container footer-grid">
           <div class="footer-intro">
             <img class="footer-logo" src="{{ site.baseurl }}/images/akreon-logo.svg" alt="Akreon">
-            <p>Infrastructure for optimization-based control systems, from specification to embedded deployment.</p>
+            <p>Decision layers for constrained systems.</p>
           </div>
           {% for column in site.data.footer %}
             <div class="footer-column">
@@ -44,7 +43,7 @@
           {% endfor %}
         </div>
         <div class="container footer-bottom">
-          <p>&copy; {{ site.time | date: '%Y' }} Akreon. Engineering-led infrastructure for deployable control software.</p>
+          <p>&copy; {{ site.time | date: '%Y' }} Akreon. Model-based decision systems for constrained, uncertain environments.</p>
         </div>
       </footer>
     </div>

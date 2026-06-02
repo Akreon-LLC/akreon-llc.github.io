@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<main class="site-main">
+  <article class="page-shell">
+    <div class="container reading-width">
+      <p class="eyebrow">{{ page.date | date: "%Y-%m-%d" }}</p>
+      <h1 class="page-title">{{ page.title }}</h1>
+      {% if page.source %}
+        <p class="page-lead">{{ page.source }}</p>
+      {% endif %}
+      <div class="prose">
+        {{ content }}
+      </div>
+    </div>
+  </article>
+</main>
