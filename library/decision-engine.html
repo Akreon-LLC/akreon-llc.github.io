@@ -1,0 +1,47 @@
+---
+title: What Akreon Means by a Decision Engine
+description: "A thesis note on the layer between models and action: state, dynamics, objectives, constraints, uncertainty, feedback, and implementation limits."
+schema_type: TechArticle
+body_class: page-standard
+---
+<article class="page-shell technical-article">
+  <div class="container reading-width">
+    <header class="article-header">
+      <p class="eyebrow">Thesis Note</p>
+      <h1>What Akreon Means by a Decision Engine</h1>
+      <p class="article-deck">A decision engine is the layer between models and action.</p>
+    </header>
+
+    <div class="prose article-prose">
+      <p class="article-lead">It takes state estimates, system dynamics, objectives, constraints, uncertainty, and timing limits, then returns controls, plans, allocations, routes, setpoints, safety-filtered actions, or recommendations.</p>
+
+      <h2>The recurring structure</h2>
+      <p>The application may be a physical system, an industrial operation, a simulation, or a market. The underlying questions are often the same:</p>
+      <ul class="question-list">
+        <li>What is the state?</li>
+        <li>How does the system evolve?</li>
+        <li>What are we trying to optimize?</li>
+        <li>What constraints cannot be violated?</li>
+        <li>What uncertainty matters?</li>
+        <li>What action needs to be taken now?</li>
+      </ul>
+
+      <h2>Connecting disciplines</h2>
+      <p>Control, optimization, estimation, simulation, and markets are often treated as separate specialties. Akreon studies them through a common structure: infer the current condition, model what may happen next, define what matters, respect hard limits, account for uncertainty, and choose an action within the available time.</p>
+      <p>The output does not need to be a low-level control input. It may be a plan, allocation, route, operating setpoint, filtered command, or recommendation. What makes it a decision engine is the explicit connection between a model of the situation and an action that changes it.</p>
+
+      <h2>Implementation is part of the problem</h2>
+      <p>A mathematically sound formulation is not yet an operational decision system. Measurements arrive late or with noise. Models omit relevant effects. Solvers have finite precision and time. Constraints interact. Objectives change. A useful decision engine includes these limits in its design rather than treating them as cleanup after the theory is complete.</p>
+
+      <h2>A first worked example</h2>
+      <p>The Cartpole tutorial arc develops this structure in a compact setting. It moves from nonlinear dynamics through state-space models, feedback and observer synthesis, optimal control, and uncertainty modeling.</p>
+    </div>
+
+    <aside class="article-next">
+      <p class="entry-meta">Akreon Tutorial Series</p>
+      <h2>From Dynamics to Feedback with Uncertainty</h2>
+      <p>See the decision engine thesis worked through one system, step by step.</p>
+      <a class="text-link" href="{{ site.baseurl }}/library/cartpole/">View the Cartpole series <span aria-hidden="true">→</span></a>
+    </aside>
+  </div>
+</article>

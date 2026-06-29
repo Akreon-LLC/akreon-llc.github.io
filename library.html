@@ -1,44 +1,75 @@
 ---
 title: Library
-description: Akreon Library is a timestamped publication stream for technical notes, essays, notebooks, videos, and papers on decision systems, optimization, control, estimation, and simulation.
-schema_type: TechArticle
+description: A curated technical library on decision systems under uncertainty, including thesis notes, tutorial arcs, rendered notebooks, videos, and technical notes.
+schema_type: CollectionPage
 body_class: page-standard
 ---
 <div class="page-shell">
-  <div class="container reading-width">
-    <h1 class="eyebrow">Library</h1>
-    <p class="page-title">Notes and references from Akreon.</p>
-    <p class="page-lead">A timestamped publication stream for technical notes, essays, notebooks, videos, and papers on decision systems, optimization, control, estimation, and simulation.</p>
+  <div class="container library-width">
+    <header class="library-header reading-width">
+      <h1 class="eyebrow">Library</h1>
+      <p class="page-title">A technical library for decision systems under uncertainty.</p>
+      <p class="page-lead">Thesis notes, worked tutorial arcs, rendered notebooks, videos, and technical notes connecting models to action.</p>
+    </header>
 
-    <div class="publication-list">
-      {% assign library_posts = site.posts %}
-      {% if library_posts.size > 0 %}
-        {% for post in library_posts %}
-          <article class="publication-item">
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-            <div>
-              {% assign item_url = post.external_url | default: post.url %}
-              <h2><a href="{% if post.external_url %}{{ item_url }}{% else %}{{ item_url | relative_url }}{% endif %}" {% if post.external_url %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ post.title }}</a></h2>
-              {% if post.source %}
-                <p class="publication-source">{{ post.source }}</p>
-              {% endif %}
-              {% if post.excerpt %}
-                <p>{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
-              {% elsif post.description %}
-                <p>{{ post.description }}</p>
-              {% endif %}
-            </div>
-          </article>
-        {% endfor %}
-      {% else %}
-        <article class="publication-item">
-          <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: "%Y-%m-%d" }}</time>
+    <div class="library-sections">
+      <section class="library-section" aria-labelledby="start-here">
+        <div class="library-section-header">
+          <p class="section-label">Start Here</p>
+          <h2 id="start-here">The central idea</h2>
+        </div>
+        <article class="library-card library-card-featured">
           <div>
-            <h2>Publication stream coming soon</h2>
-            <p>Future Akreon notes, notebooks, videos, external references, and papers will appear here in timestamped order.</p>
+            <p class="entry-meta">Thesis note</p>
+            <h3>What Akreon Means by a Decision Engine</h3>
+            <p>A short thesis note on the layer between models and action: state, dynamics, objectives, constraints, uncertainty, feedback, and implementation limits.</p>
           </div>
+          <a class="text-link" href="{{ site.baseurl }}/library/decision-engine/">Read the thesis <span aria-hidden="true">→</span></a>
         </article>
-      {% endif %}
+      </section>
+
+      <section class="library-section" aria-labelledby="tutorial-series">
+        <div class="library-section-header">
+          <p class="section-label">Akreon Tutorial Series</p>
+          <h2 id="tutorial-series">Worked examples</h2>
+        </div>
+        <article class="library-card">
+          <div>
+            <p class="entry-meta">Cartpole tutorial arc</p>
+            <h3>From Dynamics to Feedback with Uncertainty</h3>
+            <p>A worked example moving from equations of motion to state-space models, feedback synthesis, observer design, optimal control, and uncertainty modeling.</p>
+          </div>
+          <a class="text-link" href="{{ site.baseurl }}/library/cartpole/">View the series <span aria-hidden="true">→</span></a>
+        </article>
+      </section>
+
     </div>
+
+    {% assign library_posts = site.posts %}
+    {% if library_posts.size > 0 %}
+      <section class="library-section" aria-labelledby="latest-publications">
+        <div class="library-section-header">
+          <p class="section-label">Publication Stream</p>
+          <h2 id="latest-publications">Latest publications</h2>
+        </div>
+        <div class="publication-list">
+          {% for post in library_posts %}
+            <article class="publication-item">
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+              <div>
+                {% assign item_url = post.external_url | default: post.url %}
+                <h3><a href="{% if post.external_url %}{{ item_url }}{% else %}{{ item_url | relative_url }}{% endif %}" {% if post.external_url %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ post.title }}</a></h3>
+                {% if post.source %}<p class="publication-source">{{ post.source }}</p>{% endif %}
+                {% if post.excerpt %}
+                  <p>{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+                {% elsif post.description %}
+                  <p>{{ post.description }}</p>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
   </div>
 </div>

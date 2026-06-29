@@ -5,7 +5,7 @@ title: Akreon
 url: "https://akreon.ai"
 baseurl:
 logo: /images/favicon.png
-description: Akreon builds model-based decision systems for constrained, uncertain environments.
+description: Akreon studies and builds decision systems under uncertainty.
 author:
   name: Akreon
   email: hello@akreon.ai
