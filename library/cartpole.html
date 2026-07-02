@@ -16,8 +16,7 @@ body_class: page-standard
       <a href="#overview">Overview</a>
       <a href="#notebook">Rendered Notebook</a>
       <a href="#videos">Video Series</a>
-      <a href="#chapters">Posts / Chapters</a>
-      <a href="#status">Status</a>
+      <a href="#chapters">Chapters</a>
     </nav>
 
     <section class="content-section" id="overview">
@@ -32,35 +31,29 @@ body_class: page-standard
     <section class="content-section" id="notebook">
       <p class="section-label">Rendered Notebook</p>
       <h2>Technical reference</h2>
-      <p class="section-copy">The consolidated notebook will provide equations, derivations, numerical results, and visualizations for the complete arc.</p>
-      <a class="text-link placeholder-link" href="#status" aria-label="Rendered notebook publication status">Rendered notebook — publication pending</a>
-      <p class="editorial-note">Published first as a rendered technical reference. Source code and package release may follow after licensing, documentation, and API boundaries are finalized.</p>
+      <p class="section-copy">The consolidated notebook contains the nonlinear model, state-space derivation, controller and observer synthesis, numerical results, diagnostics, and closed-loop simulations for the complete arc.</p>
+      <a class="text-link placeholder-link" href="{{ site.baseurl }}/library/notebooks/cartpole-technical-reference.html">Read the rendered notebook <span aria-hidden="true">→</span></a>
+      <p class="editorial-note">The notebook is the detailed technical reference. The chapter summaries below provide a guided path through its equations, code, plots, and results.</p>
     </section>
 
     <section class="content-section" id="videos">
       <p class="section-label">Video Series</p>
       <h2>Watch the tutorial arc</h2>
-      <p class="section-copy">A companion video series will walk through the derivations, design choices, results, and limitations in each part.</p>
-      <a class="text-link placeholder-link" href="#status" aria-label="YouTube playlist publication status">YouTube playlist — publication pending</a>
+      <p class="section-copy">The six-part companion series walks through the derivations, design choices, results, and limitations developed in the notebook.</p>
+      <a class="text-link placeholder-link" href="https://www.youtube.com/playlist?list=PLQFqrwOj6HkQ">Watch the YouTube playlist <span aria-hidden="true">→</span></a>
     </section>
 
     <section class="content-section" id="chapters">
-      <p class="section-label">Posts / Chapters</p>
+      <p class="section-label">Chapters</p>
       <h2>Six parts</h2>
       <ol class="chapter-list">
-        <li><div><span>Part 01</span><h3>Equations of Motion</h3><p>Analysis of the Cartpole Equations of Motion</p></div><div class="chapter-actions"><a href="#status" aria-label="Part 01 chapter publication status">Chapter pending</a><a href="#status" aria-label="Part 01 video publication status">Video pending</a></div></li>
-        <li><div><span>Part 02</span><h3>Linearization to State Space</h3><p>Linearization to a State-Space Model</p></div><div class="chapter-actions"><a href="#status" aria-label="Part 02 chapter publication status">Chapter pending</a><a href="#status" aria-label="Part 02 video publication status">Video pending</a></div></li>
-        <li><div><span>Part 03</span><h3>State Feedback via LMIs</h3><p>State-Feedback Synthesis via LMIs</p></div><div class="chapter-actions"><a href="#status" aria-label="Part 03 chapter publication status">Chapter pending</a><a href="#status" aria-label="Part 03 video publication status">Video pending</a></div></li>
-        <li><div><span>Part 04</span><h3>Observer Feedback</h3><p>Synthesizing a Luenberger Observer</p></div><div class="chapter-actions"><a href="#status" aria-label="Part 04 chapter publication status">Chapter pending</a><a href="#status" aria-label="Part 04 video publication status">Video pending</a></div></li>
-        <li><div><span>Part 05</span><h3>Optimal Control Design</h3><p>Optimal Control with LQR and H₂ Feedback</p></div><div class="chapter-actions"><a href="#status" aria-label="Part 05 chapter publication status">Chapter pending</a><a href="#status" aria-label="Part 05 video publication status">Video pending</a></div></li>
-        <li><div><span>Part 06</span><h3>Uncertainty Modeling</h3><p>Uncertainty Modeling with Polytopic LMIs</p></div><div class="chapter-actions"><a href="#status" aria-label="Part 06 chapter publication status">Chapter pending</a><a href="#status" aria-label="Part 06 video publication status">Video pending</a></div></li>
+        <li><div><span>Part 01</span><h3>Equations of Motion</h3><p>Build the coupled nonlinear cartpole dynamics from cart translation, pole rotation, actuator force, and gravity. This establishes the physical model and identifies the nonlinear terms that shape the control problem.</p></div><div class="chapter-actions"><a href="{{ site.baseurl }}/library/notebooks/cartpole-technical-reference.html#part-1-equations-of-motion">Technical details</a><a href="https://youtu.be/WCSqESgLOaY">Watch video</a></div></li>
+        <li><div><span>Part 02</span><h3>Linearization to State Space</h3><p>Linearize the dynamics around the unstable upright equilibrium, assemble the continuous-time state-space model, and examine its poles, controllability matrix, and controllability Gramian.</p></div><div class="chapter-actions"><a href="{{ site.baseurl }}/library/notebooks/cartpole-technical-reference.html#part-2-linearization-state-space">Technical details</a><a href="https://youtu.be/6xt6sqQkQs0">Watch video</a></div></li>
+        <li><div><span>Part 03</span><h3>State Feedback via LMIs</h3><p>Convert the bilinear Lyapunov stability condition into a convex LMI using a change of variables. Recover the feedback gain, close the loop, and verify that the resulting poles are strictly stable.</p></div><div class="chapter-actions"><a href="{{ site.baseurl }}/library/notebooks/cartpole-technical-reference.html#part-3-state-feedback-lmis">Technical details</a><a href="https://youtu.be/X7bV1c032YY">Watch video</a></div></li>
+        <li><div><span>Part 04</span><h3>Observer Feedback</h3><p>Use position and angle measurements to reconstruct the full state with a Luenberger observer. Observability diagnostics and dual LMI synthesis lead to an observer-based dynamic compensator.</p></div><div class="chapter-actions"><a href="{{ site.baseurl }}/library/notebooks/cartpole-technical-reference.html#part-4-observer-feedback">Technical details</a><a href="https://youtu.be/fBHwZdjis2k">Watch video</a></div></li>
+        <li><div><span>Part 05</span><h3>Optimal Control Design</h3><p>Compare LQR and LQG designs with H₂ state-feedback and observer synthesis. The chapter connects cost weighting, disturbance channels, estimator design, and packed dynamic compensators.</p></div><div class="chapter-actions"><a href="{{ site.baseurl }}/library/notebooks/cartpole-technical-reference.html#part-5-optimal-control">Technical details</a><a href="https://youtu.be/gmxFGTlVHyk">Watch video</a></div></li>
+        <li><div><span>Part 06</span><h3>Uncertainty Modeling</h3><p>Represent pendulum-mass variation with a polytopic model and synthesize gains that satisfy every vertex. Solver diagnostics and nonlinear rollouts compare nominal and robust controllers under disturbance.</p></div><div class="chapter-actions"><a href="{{ site.baseurl }}/library/notebooks/cartpole-technical-reference.html#part-6-uncertainty-modeling">Technical details</a><a href="https://youtu.be/CqGwwmWrZ1M">Watch video</a></div></li>
       </ol>
-    </section>
-
-    <section class="content-section status-panel" id="status">
-      <p class="section-label">Status</p>
-      <h2>Publication in progress</h2>
-      <p>Videos, posts, and a rendered notebook are being published first. A public source release may follow after licensing, documentation, and API boundaries are finalized.</p>
     </section>
   </div>
 </article>

@@ -1,6 +1,6 @@
 # Akreon Website
 
-Static Jekyll site for Akreon's company website.
+Static Jekyll site for Akreon's company website hosted on github-pages.
 
 ## Structure
 
