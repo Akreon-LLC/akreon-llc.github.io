@@ -11,6 +11,21 @@
   "sameAs": {{ site.social.links | jsonify }}
 }
 </script>
+{% elsif page.schema_type == "CollectionPage" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "url": {{ page_url | jsonify }},
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": {{ site.title | jsonify }},
+    "url": {{ site.url | jsonify }}
+  }
+}
+</script>
 {% elsif page.schema_type == "TechArticle" %}
 <script type="application/ld+json">
 {
@@ -19,10 +34,25 @@
   "headline": {{ page.title | jsonify }},
   "description": {{ page.description | jsonify }},
   "url": {{ page_url | jsonify }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ page_url | jsonify }}
+  },
+  "author": {
+    "@type": "Person",
+    "name": {{ page.author | default: site.author.name | jsonify }}
+  },
+  "datePublished": {{ page.date_published | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.date_modified | default: page.date_published | date_to_xmlschema | jsonify }},
+  "image": {{ page.image | absolute_url | jsonify }},
   "publisher": {
     "@type": "Organization",
     "name": "Akreon",
-    "url": {{ site.url | jsonify }}
+    "url": {{ site.url | jsonify }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ site.organization_logo | absolute_url | jsonify }}
+    }
   }
 }
 </script>

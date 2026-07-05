@@ -4,15 +4,15 @@
 title: Akreon
 url: "https://akreon.ai"
 baseurl:
-logo: /images/favicon.png
+organization_logo: /images/akreon-logo.png
 description: Akreon studies and builds decision systems under uncertainty.
 author:
-  name: Akreon
+  name: David Akre
   email: hello@akreon.ai
 social:
   name: Akreon
   links:
-    - https://akreon.ai
+    - https://www.linkedin.com/company/akreon-ai/
 
 # -----
 # Build
@@ -26,6 +26,7 @@ defaults:
       path: ""
     values:
       layout: "page"
+      image: /images/akreon-logo.png
   - scope:
       path: "index.html"
     values:

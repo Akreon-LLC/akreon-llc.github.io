@@ -6,6 +6,9 @@
     {% seo %}
     {% assign twitter_description = page.description | default: site.description %}
     <meta name="twitter:description" content="{{ twitter_description | escape }}">
+    {% if page.robots %}
+    <meta name="robots" content="{{ page.robots | escape }}">
+    {% endif %}
     {% include structured-data.html %}
     {% feed_meta %}
     <link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
