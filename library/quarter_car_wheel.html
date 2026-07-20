@@ -1,0 +1,69 @@
+---
+title: Quarter-Car H-Infinity (H∞) Control
+description: A succinct tutorial arc from road disturbance modeling to robust active-suspension control.
+schema_type: TechArticle
+author: David Akre
+date_published: 2026-07-20
+date_modified: 2026-07-20
+body_class: page-standard
+---
+<article class="page-shell technical-article tutorial-arc">
+  <div class="container reading-width">
+    <header class="article-header">
+      <p class="eyebrow">Akreon Tutorial Series</p>
+      <h1>Quarter-Car H∞ Control</h1>
+      <p class="article-deck">From road disturbance to robust ride control in one active-suspension example.</p>
+    </header>
+
+    <nav class="article-nav" aria-label="Tutorial sections">
+      <a href="#overview">Overview</a>
+      <a href="#notebook">Rendered Notebook</a>
+      <a href="#videos">Video Series</a>
+      <a href="#chapters">Chapters</a>
+      <a href="#next-series">Coming Next</a>
+    </nav>
+
+    <section class="content-section" id="overview">
+      <p class="section-label">Overview</p>
+      <h2>Shape the worst case, not just the nominal response</h2>
+      <div class="prose prose-compact">
+        <p>This tutorial uses an active quarter-car suspension to connect physical modeling with H∞ control. Road motion becomes the disturbance; ride comfort, suspension travel, road holding, and actuator effort become competing performance channels.</p>
+        <p>The six-part arc moves from dynamics and open-loop analysis to static weighting, observer-based output feedback, frequency shaping, and mixed-sensitivity synthesis.</p>
+      </div>
+    </section>
+
+    <section class="content-section" id="notebook">
+      <p class="section-label">Rendered Notebook</p>
+      <h2>Technical reference</h2>
+      <p class="section-copy">The consolidated notebook contains the quarter-car model, generalized plants, scaling, H∞ LMIs, controller and observer synthesis, compensator realizations, and physical step and frequency-response comparisons.</p>
+      <a class="text-link" href="{{ site.baseurl }}/library/notebooks/quarter-car-technical-reference.html">Read the rendered notebook <span aria-hidden="true">→</span></a>
+      <p class="editorial-note">Use the chapter links below to jump directly to each derivation, implementation, and result.</p>
+    </section>
+
+    <section class="content-section" id="videos">
+      <p class="section-label">Video Series</p>
+      <h2>Watch the tutorial arc</h2>
+      <p class="section-copy">The six-part companion series walks through the model, robust-control design choices, synthesis steps, and physical performance comparisons developed in the notebook.</p>
+      <a class="text-link" href="https://www.youtube.com/playlist?list=PLHWt4_fzZ6FY">Watch the YouTube playlist <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="content-section" id="chapters">
+      <p class="section-label">Chapters</p>
+      <h2>Six parts</h2>
+      <ol class="chapter-list">
+        <li><div><span>Part 01</span><h3>Quarter-Car Dynamics</h3><p>Model the sprung mass, wheel mass, suspension, tire, actuator, and road input around static equilibrium.</p></div><div class="chapter-actions"><a href="{{ site.baseurl }}/library/notebooks/quarter-car-technical-reference.html#Part-1---Quarter-Car-Dynamics-and-Equilibrium-Model">Technical details</a><a href="https://youtu.be/2j1RnSj5-mo">Watch video</a></div></li>
+        <li><div><span>Part 02</span><h3>State Space and Open Loop</h3><p>Assemble the state-space plant and examine its modes, controllability, observability, and finite-horizon Gramians.</p></div><div class="chapter-actions"><a href="{{ site.baseurl }}/library/notebooks/quarter-car-technical-reference.html#Part-2---State-Space-and-Open-Loop-Analysis">Technical details</a><a href="https://youtu.be/qaOJ9j1et_Y">Watch video</a></div></li>
+        <li><div><span>Part 03</span><h3>Static-Weight H∞ Feedback</h3><p>Translate physical ride objectives into a scaled generalized plant and synthesize full-state feedback with the bounded-real LMI.</p></div><div class="chapter-actions"><a href="{{ site.baseurl }}/library/notebooks/quarter-car-technical-reference.html#Part-3---Static-Weight-H%E2%88%9E-State-Feedback">Technical details</a><a href="https://youtu.be/Zkik1y3SuGE">Watch video</a></div></li>
+        <li><div><span>Part 04</span><h3>H∞ Observer and Output Feedback</h3><p>Estimate the suspension state from measured outputs and realize a practical dynamic compensator using the static H∞ gain.</p></div><div class="chapter-actions"><a href="{{ site.baseurl }}/library/notebooks/quarter-car-technical-reference.html#Part-4---H%E2%88%9E-Observer-and-Static-Weight-Output-Feedback">Technical details</a><a href="https://youtu.be/sgNCE4uIE_w">Watch video</a></div></li>
+        <li><div><span>Part 05</span><h3>Frequency-Shaped Performance</h3><p>Replace static penalties with dynamic weights and synthesize an augmented measured-output compensator across frequency.</p></div><div class="chapter-actions"><a href="{{ site.baseurl }}/library/notebooks/quarter-car-technical-reference.html#Part-5---Frequency-Shaped-H%E2%88%9E-Performance-and-Measured-Output-Compensator">Technical details</a><a href="https://youtu.be/0Uke--EisRQ">Watch video</a></div></li>
+        <li><div><span>Part 06</span><h3>Mixed-Sensitivity Synthesis</h3><p>Shape sensitivity, complementary sensitivity, and control sensitivity, then compare all designs on the same physical plant.</p></div><div class="chapter-actions"><a href="{{ site.baseurl }}/library/notebooks/quarter-car-technical-reference.html#Part-6-%E2%80%94-$S/T/KS$-Mixed-Sensitivity-Synthesis">Technical details</a><a href="https://youtu.be/yNVPdA7cUpE">Watch video</a></div></li>
+      </ol>
+    </section>
+
+    <aside class="article-next" id="next-series">
+      <p class="entry-meta">Coming next · Akreon Tutorial Series</p>
+      <h2>Control Barrier Functions</h2>
+      <p>The next series explores control barrier functions and their role in safety-critical control.</p>
+    </aside>
+  </div>
+</article>
